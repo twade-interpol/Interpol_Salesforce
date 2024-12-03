@@ -753,6 +753,10 @@
             <translation>完了しました</translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Done</masterLabel>
+            <translation><!-- Done --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Draft</masterLabel>
             <translation>下書き</translation>
         </picklistValues>
@@ -767,6 +771,10 @@
         <picklistValues>
             <masterLabel>Rejected</masterLabel>
             <translation>却下</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To Do</masterLabel>
+            <translation><!-- To Do --></translation>
         </picklistValues>
     </fields>
     <fields>
