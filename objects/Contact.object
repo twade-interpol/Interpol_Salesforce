@@ -333,6 +333,17 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Aliases__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Aliases</label>
+        <referenceTo>Alias__c</referenceTo>
+        <relationshipLabel>Related Aliases</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>AssistantName</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -345,8 +356,37 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Businesses__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Businesses</label>
+        <referenceTo>Businesses__c</referenceTo>
+        <relationshipLabel>Related Businesses</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ContactSource</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <label>Country</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DOBs__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>DOBs</label>
+        <referenceTo>DOB__c</referenceTo>
+        <relationshipLabel>Related DOBs</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Department</fullName>
@@ -413,6 +453,17 @@
         <trackFeedHistory>true</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Offenses__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Offenses</label>
+        <referenceTo>Offence__c</referenceTo>
+        <relationshipLabel>Related Offenses</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>OtherAddress</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -438,6 +489,114 @@
         <fullName>ReportsToId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <label>Role</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Agency</fullName>
+                    <default>false</default>
+                    <label>Agency</label>
+                </value>
+                <value>
+                    <fullName>Associate</fullName>
+                    <default>false</default>
+                    <label>Associate</label>
+                </value>
+                <value>
+                    <fullName>Company</fullName>
+                    <default>false</default>
+                    <label>Company</label>
+                </value>
+                <value>
+                    <fullName>Criminal Organization</fullName>
+                    <default>false</default>
+                    <label>Criminal Organization</label>
+                </value>
+                <value>
+                    <fullName>Criminal Subject/Offender</fullName>
+                    <default>false</default>
+                    <label>Criminal Subject/Offender</label>
+                </value>
+                <value>
+                    <fullName>Gang Member</fullName>
+                    <default>false</default>
+                    <label>Gang Member</label>
+                </value>
+                <value>
+                    <fullName>Informant</fullName>
+                    <default>false</default>
+                    <label>Informant</label>
+                </value>
+                <value>
+                    <fullName>Institution</fullName>
+                    <default>false</default>
+                    <label>Institution</label>
+                </value>
+                <value>
+                    <fullName>Non-Criminal Organization</fullName>
+                    <default>false</default>
+                    <label>Non-Criminal Organization</label>
+                </value>
+                <value>
+                    <fullName>Non-Criminal Subject</fullName>
+                    <default>false</default>
+                    <label>Non-Criminal Subject</label>
+                </value>
+                <value>
+                    <fullName>Officer</fullName>
+                    <default>false</default>
+                    <label>Officer</label>
+                </value>
+                <value>
+                    <fullName>Owner/Owned</fullName>
+                    <default>false</default>
+                    <label>Owner/Owned</label>
+                </value>
+                <value>
+                    <fullName>Religious Organization</fullName>
+                    <default>false</default>
+                    <label>Religious Organization</label>
+                </value>
+                <value>
+                    <fullName>Sexual Offender</fullName>
+                    <default>false</default>
+                    <label>Sexual Offender</label>
+                </value>
+                <value>
+                    <fullName>Sexual Predator</fullName>
+                    <default>false</default>
+                    <label>Sexual Predator</label>
+                </value>
+                <value>
+                    <fullName>Unknown Organization Role</fullName>
+                    <default>false</default>
+                    <label>Unknown Organization Role</label>
+                </value>
+                <value>
+                    <fullName>Unknown Person Role</fullName>
+                    <default>false</default>
+                    <label>Unknown Person Role</label>
+                </value>
+                <value>
+                    <fullName>Victim</fullName>
+                    <default>false</default>
+                    <label>Victim</label>
+                </value>
+                <value>
+                    <fullName>Witness</fullName>
+                    <default>false</default>
+                    <label>Witness</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Title</fullName>
