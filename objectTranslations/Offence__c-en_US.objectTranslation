@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Offence</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Offenses</value>
+    </caseValues>
+    <fields>
+        <label></label>
+        <name>Offenses__c</name>
+        <relationshipLabel></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Offense Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Create_an_Offense</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

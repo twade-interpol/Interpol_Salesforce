@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>true</plural>
+        <value>Properties</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <value>Property</value>
+    </caseValues>
+    <fields>
+        <label></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Identification Document</masterLabel>
+            <translation></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label></label>
+        <name>Properties__c</name>
+        <relationshipLabel></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Properties Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
