@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <decisions>
+        <name>Decision_1</name>
+        <label>Decision 1</label>
+        <locationX>974</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>PotentialHit</name>
+            <conditionLogic>1 OR 2 OR 3 OR 4 OR 5 OR 6</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>e-nominal database : Alarm message</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.From__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MAILER-DAEMON@mx0e-00376703.gpphosted.com</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.To__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>deborah.k.crane@ice.dhs.gov</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>undeliverable:</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>sex offender</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>travel</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>update_Rec</targetReference>
+            </connector>
+            <label>Potential Hit</label>
+        </rules>
+        <rules>
+            <name>Stolen_Lost_Travel_Documents</name>
+            <conditionLogic>1 AND 2 AND (3 OR 4 OR 5 OR 6 OR 7 OR 8)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>e-stolen/lost travel documents database : Alarm message</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email_Body__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Reason for search : Investigation</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Office__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>caricom</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Office__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>panama</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Office__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>brazil</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Office__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>mexico</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Office__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>dominican republic</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Office__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>peru</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>update_rec_stolen</targetReference>
+            </connector>
+            <label>Stolen/Lost Travel Documents</label>
+        </rules>
+        <rules>
+            <name>Advanced_Passenger_Information_System</name>
+            <conditionLogic>1 OR 2 OR 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.From__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>APISCONFIRMNOREPLY</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.From__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>APISConfirmNoReply@dhs.gov</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Interpol Hit on Flight</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>update_rec_advanced</targetReference>
+            </connector>
+            <label>Advanced Passenger Information System</label>
+        </rules>
+        <rules>
+            <name>Stolen_Motor_Vehicle</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>e-stolen motor vehicles database : Alarm message</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>update_rec_stolen_motor</targetReference>
+            </connector>
+            <label>Stolen Motor Vehicle</label>
+        </rules>
+        <rules>
+            <name>Transportation_Security_Administration_Secure_Flight</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.From__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>TSA_SF_Responses@USNCB.USDOJ.GOV</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.From__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>TSA_SF_Decryption_Svc@USNCB.USDOJ.GOV</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>update_rec_security</targetReference>
+            </connector>
+            <label>Transportation Security Administration - Secure Flight</label>
+        </rules>
+        <rules>
+            <name>National_Criminal_Information_Center</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.From__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>fbidatabase2@fbisqlsrv.ncic.fbi.gov</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>NCIC Results for</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>update_rec_NCIC</targetReference>
+            </connector>
+            <label>National Criminal Information Center</label>
+        </rules>
+        <rules>
+            <name>National_Law_Enforcement_Telecommunication_System</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.From__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>fbidatabase2@fbisqlsrv.ncic.fbi.gov</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>NLETS Message</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>update_rec_NLE</targetReference>
+            </connector>
+            <label>National Law Enforcement Telecommunication System</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Auto Resolve Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Resolve Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>update_Rec</name>
+        <label>update Rec</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Auto_Resolve_Comments__c</field>
+            <value>
+                <stringValue>Nominal - Potential Hit</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Auto_Resolve__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>update_rec_advanced</name>
+        <label>update rec advanced</label>
+        <locationX>578</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Auto_Resolve_Comments__c</field>
+            <value>
+                <stringValue>APIS - Advanced Passenger Information System</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Auto_Resolve__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>update_rec_NCIC</name>
+        <label>update rec NCIC</label>
+        <locationX>1370</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Auto_Resolve_Comments__c</field>
+            <value>
+                <stringValue>NCIC - National Criminal Information Center</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Auto_Resolve__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>update_rec_NLE</name>
+        <label>update rec NLE</label>
+        <locationX>1634</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Auto_Resolve_Comments__c</field>
+            <value>
+                <stringValue>NLETS - National Law Enforcement Telecommunication System</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Auto_Resolve__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>update_rec_security</name>
+        <label>update rec security</label>
+        <locationX>1106</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Auto_Resolve_Comments__c</field>
+            <value>
+                <stringValue>TSA_SF - Transportation Security Administration - Secure Flight</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Auto_Resolve__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>update_rec_stolen</name>
+        <label>update rec stolen</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Auto_Resolve_Comments__c</field>
+            <value>
+                <stringValue>SLTD - Stolen/Lost Travel Documents</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Auto_Resolve__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>update_rec_stolen_motor</name>
+        <label>update rec stolen motor</label>
+        <locationX>842</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Auto_Resolve_Comments__c</field>
+            <value>
+                <stringValue>SMV - Stolen Motor Vehicle</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Auto_Resolve__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>848</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Decision_1</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>enominaldatabaseAlarmmessage</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;e-nominal database : Alarm message&quot;&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>
