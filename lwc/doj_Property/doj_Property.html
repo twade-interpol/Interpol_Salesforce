@@ -1,0 +1,69 @@
+<!--
+  Developed By: Henry Dennis | Date: 9/27/2024
+  Description: Template html File for the Interpol Case Property LWC component
+-->
+<template>
+  <div class="slds-box" style="background-color: rgb(4, 61, 127);">
+    <div class="slds-grid slds-wrap">
+      <div class="slds-col slds-size_12-of-12 slds-align_absolute-left"> 
+     <lightning-card title="Properties" icon-name="standard:search">
+        <!--<lightning-button variant="brand" label="Create New Property" onclick={goToCreateNewPropertyForm} class="slds-m-left_x-small"></lightning-button>-->
+         <!--<lightning-button variant="success" label="Update Selected Property" onclick={handleUpdateProperty} class="slds-m-left_x-small"></lightning-button>-->
+
+     <template if:true={error}>
+        <p>{error}</p>
+       </template>
+
+     <!--<div class="slds-grid slds-grid_vertical-align-center slds-grid_align-spread">-->
+        <div class="slds-col">
+                
+                <div class="slds-p-horizontal_x-small slds-p-bottom_xx-small">
+                    <p>Selected Property: {selectedPropertyLen}</p>
+                   <!-- <lightning-input type="search" placeholder="Please Enter data To Search..."  onchange={handleSearch}></lightning-input>-->
+                    
+               </div>
+        </div> <br>
+      <!--</div>-->
+   
+
+        <lightning-datatable
+            key-field="Id"
+            data={properties}
+            columns={propertyColumns}
+            onrowaction={handleRowAction}
+            onrowselection={handleRowSelection}
+            show-row-number-column>
+        </lightning-datatable>
+
+
+
+
+
+      <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-spread" style="padding-top: 0.5em;">
+            <div class="slds-col"></div>
+            <div class="slds-col"></div>
+            <!--PAGE NAVIGATION-->
+            <div class="slds-col">
+                <div style={paginationVisibility}>                 
+                    <div class="slds-col slds-p-bottom_xx-small">                     
+                        <span>
+                            <lightning-button-icon icon-name="utility:chevronleft" variant="bare" size="medium" alternative-text="Previous Page" onclick={previousPage}></lightning-button-icon>
+                        </span>
+                        <label class="slds-text-color_weak slds-p-horizontal_x-small" for="pageNum">Page:</label> 
+                        <input type="number" id="pageNum" value={pageNumber} maxlength="4" onkeypress={handlePageNumberChange} class="customInput" title="Go to a Page"></input>
+                        <span>&nbsp;of&nbsp;<b id="totalPages">{totalPages}</b></span>
+                        <span>
+                            <template if:true={pageNumber}></template>
+                            <lightning-button-icon icon-name="utility:chevronright" variant="bare" size="medium" alternative-text="Next Page" onclick={nextPage} class="slds-p-horizontal_x-small"></lightning-button-icon>
+                        </span>                                                          
+                    </div>
+                </div>
+            </div>      
+      </div>
+
+     </lightning-card>  
+
+     </div>    
+    </div>
+  </div>
+</template>

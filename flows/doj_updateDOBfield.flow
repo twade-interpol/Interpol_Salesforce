@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <description>update Date Of Birth field to DOB Name field</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>convert Name field to date field</description>
+        <name>convertTextTodate</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+    VALUE(MID($Record.Name, 7, 4)),  
+    VALUE(MID($Record.Name, 1, 2)),  
+    VALUE(MID($Record.Name, 4, 2))   
+)</expression>
+    </formulas>
+    <formulas>
+        <name>DateOfBithAsText</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Date_of_Birth__c})</expression>
+    </formulas>
+    <interviewLabel>doj_updateDOBfield {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>doj_updateDOBfield</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>updateDobName</name>
+        <label>updateDobName</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>Date_of_Birth__c</field>
+            <value>
+                <elementReference>convertTextTodate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>updateDobName</targetReference>
+        </connector>
+        <object>DOB__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
