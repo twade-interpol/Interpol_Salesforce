@@ -184,6 +184,17 @@
         <type>Lookup</type>
     </fields>
     <label>Association for Inquiry to INTERPOL Case</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Interpol_Case__c</columns>
+        <columns>Inquiry__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Inquiries and INTERPOL Cases</label>
+    </listViews>
     <nameField>
         <displayFormat>R-{0000000000}</displayFormat>
         <label>Inquiry INTERPOL Relation</label>

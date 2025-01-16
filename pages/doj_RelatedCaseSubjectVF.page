@@ -1,0 +1,18 @@
+<apex:page standardController="Case_Subject__c" recordSetVar="subjects"  sidebar="false" showHeader="false">
+    <apex:includeLightning />
+    <div style="width:100%;height:100%;" id="LightningContainer"/>
+   <script type="text/javascript">
+     const urlParams = new URLSearchParams(window.location.search);
+     const recordId = urlParams.get('id');
+     console.log('urlParams>>'+urlParams);
+     console.log('recordId>>'+recordId);
+    //Create Lightning Component
+    $Lightning.use("c:doj_RelatatedSubjectApplication", function() {
+        $Lightning.createComponent("c:doj_RelatedSubjectNew", {parentRecordId : recordId
+        },"LightningContainer", function(component,status, errorMessage) {
+            console.log('Component created',status);
+        });
+    });
+     
+</script>
+</apex:page>

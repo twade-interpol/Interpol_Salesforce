@@ -15,6 +15,9 @@
                         <valueListItems>
                             <value>FeedItem.TextPost</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>ComplaintCase.Change_Owner</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
