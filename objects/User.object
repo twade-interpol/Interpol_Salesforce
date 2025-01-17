@@ -287,6 +287,69 @@
         <label>Copado License Manager</label>
     </fieldSets>
     <fields>
+        <fullName>Business_Unit__c</fullName>
+        <label>Business Unit</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Border Security (BSD)</fullName>
+                    <default>false</default>
+                    <label>Border Security (BSD)</label>
+                </value>
+                <value>
+                    <fullName>Counterterrorism (CTD)</fullName>
+                    <default>false</default>
+                    <label>Counterterrorism (CTD)</label>
+                </value>
+                <value>
+                    <fullName>Cyber Crime Unit (TCD)</fullName>
+                    <default>false</default>
+                    <label>Cyber Crime Unit (TCD)</label>
+                </value>
+                <value>
+                    <fullName>Emerging Crime Unit (TCD)</fullName>
+                    <default>false</default>
+                    <label>Emerging Crime Unit (TCD)</label>
+                </value>
+                <value>
+                    <fullName>Front Office</fullName>
+                    <default>false</default>
+                    <label>Front Office</label>
+                </value>
+                <value>
+                    <fullName>General Counsel</fullName>
+                    <default>false</default>
+                    <label>General Counsel</label>
+                </value>
+                <value>
+                    <fullName>Global Police Services (GPS)</fullName>
+                    <default>false</default>
+                    <label>Global Police Services (GPS)</label>
+                </value>
+                <value>
+                    <fullName>High Priority Inquiries</fullName>
+                    <default>false</default>
+                    <label>High Priority Inquiries</label>
+                </value>
+                <value>
+                    <fullName>IOCC-Dispatch</fullName>
+                    <default>false</default>
+                    <label>IOCC-Dispatch</label>
+                </value>
+                <value>
+                    <fullName>Organized Crime Unit (TCD)</fullName>
+                    <default>false</default>
+                    <label>Organized Crime Unit (TCD)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>ManagerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <type>Hierarchy</type>
