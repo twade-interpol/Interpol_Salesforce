@@ -718,13 +718,25 @@
     </fields>
     <listViews>
         <fullName>AllOpenCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Received_On__c</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Importance__c</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>Sender__c</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>Category__c</columns>
+        <columns>INTERPOL_Cases__c</columns>
+        <columns>Modified_On__c</columns>
+        <columns>OWNER_NAME</columns>
+        <columns>Owning_Division__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
             <operation>equals</operation>
             <value>0</value>
         </filters>
-        <label>All Open Cases</label>
+        <label>All Open INTERPOL Inquiries</label>
     </listViews>
     <listViews>
         <fullName>High_Priority_Inquiries_Case</fullName>
@@ -756,13 +768,25 @@
     </listViews>
     <listViews>
         <fullName>MyOpenCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Received_On__c</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Importance__c</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>Sender__c</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>Category__c</columns>
+        <columns>INTERPOL_Cases__c</columns>
+        <columns>Modified_On__c</columns>
+        <columns>OWNER_NAME</columns>
+        <columns>Owning_Division__c</columns>
         <filterScope>Mine</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
             <operation>equals</operation>
             <value>0</value>
         </filters>
-        <label>My Open Cases</label>
+        <label>My Open Inquires</label>
     </listViews>
     <listViews>
         <fullName>My_Division_Inquires</fullName>

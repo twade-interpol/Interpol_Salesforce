@@ -22,6 +22,7 @@ export default class Doj_RelatedSubject extends LightningElement {
     delayTimeout;           // Used for debouncing the search input
     isPopupOpen=false;
     objectName=' ';
+    objectId='';
 
     connectedCallback() {
         this.recordId=this.recordId;
@@ -117,9 +118,11 @@ export default class Doj_RelatedSubject extends LightningElement {
 
         linkSubject({ subjectIds: this.selectedIds,parentId:this.recordId})
             .then(result => {
-                console.log('Apex call result:', result);
+                console.log('Apex call result:', result[0]);
+                console.log('Apex call result1>>:', result[1]);
+                this.objectId=result[1];
                 this.navigateToRecord();
-                 this.showToast(result);
+                 this.showToast(result[0]);
                 // Additional success handling, like showing a success message
             })
             .catch(error => {
@@ -146,7 +149,7 @@ export default class Doj_RelatedSubject extends LightningElement {
 
         // Build the URL dynamically
         const baseUrl = window.location.origin;
-        const recordUrl = `${baseUrl}/${this.recordId}`;
+        const recordUrl = `${baseUrl}/${this.objectId}`;
 
         // Redirect to the record page
         setTimeout(() => {
@@ -156,7 +159,7 @@ export default class Doj_RelatedSubject extends LightningElement {
     handleCancel()
     {
        const baseUrl = window.location.origin;
-       const recordUrl = `${baseUrl}/${this.recordId}`;
+       const recordUrl = `${baseUrl}/${this.objectId}`;
        window.location.assign(recordUrl);
     }
 
