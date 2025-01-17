@@ -313,6 +313,7 @@
     </fields>
     <fields>
         <fullName>ParentId</fullName>
+        <businessStatus>Hidden</businessStatus>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Hierarchy</type>
     </fields>
@@ -339,6 +340,10 @@
     </fields>
     <fields>
         <fullName>Site</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>SourceSystemIdentifier</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
