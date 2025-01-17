@@ -207,6 +207,32 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Address_Book__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Address Book</label>
+        <referenceTo>Address_Book__c</referenceTo>
+        <relationshipLabel>INTERPOL Inquiries</relationshipLabel>
+        <relationshipName>INTERPOL_Inquiries</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Aliases__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Aliases</label>
+        <referenceTo>Alias__c</referenceTo>
+        <relationshipLabel>Related Aliases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>AssetId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
@@ -214,11 +240,72 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Auto_Resolve_Comments__c</fullName>
+        <label>Auto Resolve Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Auto_Resolve__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Auto Resolve</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bcc__c</fullName>
+        <label>Bcc</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>BusinessHoursId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Businesses__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Businesses</label>
+        <referenceTo>Businesses__c</referenceTo>
+        <relationshipLabel>Related Businesses</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CC__c</fullName>
+        <label>CC</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <label>Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>ClosedDate</fullName>
@@ -252,10 +339,64 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>Control_Nr__c</fullName>
+        <label>Control_Nr</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DOBs__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>DOBs</label>
+        <referenceTo>DOB__c</referenceTo>
+        <relationshipLabel>Related DOBs</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Deduplication_Details__c</fullName>
+        <description>This field is used for MuleSoft deduplication to inform IOCC dispatch that multiple cases were found during ingestion but MuleSoft couldn&apos;t determine an exact match so IOCC dispatch will have to triage the inquiry to determine next steps. This field is customer facing and needs to be seen by all users. This field needs to be added to the new Inquiry LWC.</description>
+        <externalId>false</externalId>
+        <label>Deduplication Details</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Description</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ENTITY_ID__c</fullName>
+        <label>ENTITY_ID</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Email_Body__c</fullName>
+        <label>Email Body</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
     </fields>
     <fields>
         <fullName>EntitlementId</fullName>
@@ -263,6 +404,49 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FileNumber__c</fullName>
+        <label>FileNumber</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>From__c</fullName>
+        <externalId>false</externalId>
+        <label>From</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>INTERPOL_Cases__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>INTERPOL Case</label>
+        <referenceTo>ComplaintCase</referenceTo>
+        <relationshipLabel>Related Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Importance__c</fullName>
+        <label>Importance</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>IsClosedOnCreate</fullName>
@@ -297,6 +481,38 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>Modified_On__c</fullName>
+        <label>Modified On</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Offenses__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Offenses</label>
+        <referenceTo>Offence__c</referenceTo>
+        <relationshipLabel>Related Offenses</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Office__c</fullName>
+        <label>Office</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>Origin</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
@@ -309,6 +525,15 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Owning_Division__c</fullName>
+        <label>Owning Division</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>ParentId</fullName>
@@ -332,11 +557,48 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>QueueID__c</fullName>
+        <label>QueueID</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>Reason</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Received_On__c</fullName>
+        <label>Received On</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Reference__c</fullName>
+        <label>Reference</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Sender__c</fullName>
+        <label>Sender</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>ServiceContractId</fullName>
@@ -370,6 +632,15 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Status_Id__c</fullName>
+        <label>Status Id</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>StopStartDate</fullName>
         <trackTrending>false</trackTrending>
     </fields>
@@ -378,6 +649,16 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <label>Subject</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>SuppliedCompany</fullName>
@@ -396,21 +677,76 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>To__c</fullName>
+        <label>To</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>Type</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
+    <fields>
+        <fullName>Type_Of_Notification__c</fullName>
+        <label>Type Of Notification</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
     <listViews>
         <fullName>AllOpenCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Received_On__c</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Importance__c</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>Sender__c</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>Category__c</columns>
+        <columns>INTERPOL_Cases__c</columns>
+        <columns>Modified_On__c</columns>
+        <columns>OWNER_NAME</columns>
+        <columns>Owning_Division__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
             <operation>equals</operation>
             <value>0</value>
         </filters>
-        <label>All Open Cases</label>
+        <label>All Open INTERPOL Inquiries</label>
+    </listViews>
+    <listViews>
+        <fullName>High_Priority_Inquiries_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>High Priority Inquiries</label>
+        <queue>High_Priority_Inquiries</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>IOCC_Dispatch_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>IOCC-Dispatch</label>
+        <queue>IOCC_Dispatch</queue>
+        <sharedTo />
     </listViews>
     <listViews>
         <fullName>MyCases</fullName>
@@ -419,13 +755,56 @@
     </listViews>
     <listViews>
         <fullName>MyOpenCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Received_On__c</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Importance__c</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>Sender__c</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>Category__c</columns>
+        <columns>INTERPOL_Cases__c</columns>
+        <columns>Modified_On__c</columns>
+        <columns>OWNER_NAME</columns>
+        <columns>Owning_Division__c</columns>
         <filterScope>Mine</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
             <operation>equals</operation>
             <value>0</value>
         </filters>
-        <label>My Open Cases</label>
+        <label>My Open Inquires</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Division_Inquires</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Received_On__c</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>Importance__c</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>Sender__c</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>Category__c</columns>
+        <columns>INTERPOL_Cases__c</columns>
+        <columns>Modified_On__c</columns>
+        <columns>OWNER_NAME</columns>
+        <columns>Owning_Division__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>My Division Open Inquires</label>
+    </listViews>
+    <listViews>
+        <fullName>Translation_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Translation</label>
+        <queue>Translation</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
