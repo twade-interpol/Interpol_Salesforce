@@ -248,6 +248,17 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Agency_Name__c</fullName>
+        <description>Name of the Agency</description>
+        <externalId>false</externalId>
+        <label>Agency Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>AnnualRevenue</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -302,6 +313,7 @@
     </fields>
     <fields>
         <fullName>ParentId</fullName>
+        <businessStatus>Hidden</businessStatus>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Hierarchy</type>
     </fields>
