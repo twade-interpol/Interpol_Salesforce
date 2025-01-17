@@ -187,6 +187,47 @@
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>Country_of_issuance_id__c</fullName>
+        <label>Country_of_issuance_id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_issue__c</fullName>
+        <label>Date of issue</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Document_Nr__c</fullName>
+        <label>Document_Nr</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Expiry_Date__c</fullName>
+        <label>Expiry Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Place_of_issuance__c</fullName>
+        <label>Place_of_issuance</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>Properties__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <label>Property</label>
@@ -197,6 +238,127 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Property_Type__c</fullName>
+        <label>Property Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Identification Card</fullName>
+                    <default>false</default>
+                    <label>Identification Card</label>
+                </value>
+                <value>
+                    <fullName>Passport</fullName>
+                    <default>false</default>
+                    <label>Passport</label>
+                </value>
+                <value>
+                    <fullName>Drivers License</fullName>
+                    <default>false</default>
+                    <label>Drivers License</label>
+                </value>
+                <value>
+                    <fullName>Train Ticket</fullName>
+                    <default>false</default>
+                    <label>Train Ticket</label>
+                </value>
+                <value>
+                    <fullName>Airline Ticket</fullName>
+                    <default>false</default>
+                    <label>Airline Ticket</label>
+                </value>
+                <value>
+                    <fullName>State ID</fullName>
+                    <default>false</default>
+                    <label>State ID</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Subject</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Related Properties</relationshipLabel>
+        <relationshipName>Properties</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Subject_Related_Property__c</fullName>
+        <externalId>false</externalId>
+        <formula>Properties__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subject Related Property</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_of_Document__c</fullName>
+        <label>Type of Document</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Passport</fullName>
+                    <default>false</default>
+                    <label>Passport</label>
+                </value>
+                <value>
+                    <fullName>Driver License</fullName>
+                    <default>false</default>
+                    <label>Driver License</label>
+                </value>
+                <value>
+                    <fullName>Identity Card</fullName>
+                    <default>false</default>
+                    <label>Identity Card</label>
+                </value>
+                <value>
+                    <fullName>Residence permit</fullName>
+                    <default>false</default>
+                    <label>Residence permit</label>
+                </value>
+                <value>
+                    <fullName>Social Security Number</fullName>
+                    <default>false</default>
+                    <label>Social Security Number</label>
+                </value>
+                <value>
+                    <fullName>National Identification Number</fullName>
+                    <default>false</default>
+                    <label>National Identification Number</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Alien Registration Number</fullName>
+                    <default>false</default>
+                    <label>Alien Registration Number</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <label>Property</label>
     <listViews>
