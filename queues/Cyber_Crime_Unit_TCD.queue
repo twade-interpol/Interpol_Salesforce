@@ -2,17 +2,6 @@
 <Queue xmlns="http://soap.sforce.com/2006/04/metadata">
     <doesSendEmailToMembers>true</doesSendEmailToMembers>
     <name>Cyber Crime Unit (TCD)</name>
-    <queueMembers>
-        <users>
-            <user>ashrestha@inteprosfed.com</user>
-            <user>chandramohan.neelam@usdoj.gov</user>
-            <user>henry.dennis@usdoj.gov</user>
-            <user>iatestuser@inteprosfed.com</user>
-            <user>mmagesh@inteprosfed.com</user>
-            <user>quadrel.carrington@usdoj.gov</user>
-            <user>timothy.wade@usdoj.gov</user>
-        </users>
-    </queueMembers>
     <queueSobject>
         <sobjectType>ComplaintCase</sobjectType>
     </queueSobject>
