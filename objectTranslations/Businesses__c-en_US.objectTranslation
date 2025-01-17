@@ -10,8 +10,20 @@
     </caseValues>
     <fields>
         <label></label>
+        <name>Business_Email__c</name>
+    </fields>
+    <fields>
+        <label></label>
+        <name>Business_Phone__c</name>
+    </fields>
+    <fields>
+        <label></label>
         <name>Businesses__c</name>
         <relationshipLabel></relationshipLabel>
+    </fields>
+    <fields>
+        <label></label>
+        <name>Street_Address__c</name>
     </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

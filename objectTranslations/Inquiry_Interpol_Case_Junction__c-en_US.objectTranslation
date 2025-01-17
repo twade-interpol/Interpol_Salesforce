@@ -8,6 +8,16 @@
         <plural>true</plural>
         <value>Inquiries and INTERPOL Cases</value>
     </caseValues>
+    <fields>
+        <label></label>
+        <name>Inquiry__c</name>
+        <relationshipLabel></relationshipLabel>
+    </fields>
+    <fields>
+        <label></label>
+        <name>Interpol_Case__c</name>
+        <relationshipLabel></relationshipLabel>
+    </fields>
     <layouts>
         <layout>Inquiry Interpol Case Junction Layout</layout>
         <sections>

@@ -10,6 +10,11 @@
     </caseValues>
     <fields>
         <label></label>
+        <name>INTERPOL_Case__c</name>
+        <relationshipLabel></relationshipLabel>
+    </fields>
+    <fields>
+        <label></label>
         <name>Subject__c</name>
         <relationshipLabel></relationshipLabel>
     </fields>

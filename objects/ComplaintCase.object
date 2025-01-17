@@ -160,7 +160,8 @@
     </fields>
     <fields>
         <fullName>CaseId</fullName>
-        <trackHistory>false</trackHistory>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -263,6 +264,7 @@
     </fields>
     <fields>
         <fullName>PublicComplaintId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>

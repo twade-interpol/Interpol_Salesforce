@@ -156,6 +156,17 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>INTERPOL_Case__c</fullName>
+        <label>INTERPOL Case</label>
+        <referenceTo>ComplaintCase</referenceTo>
+        <relationshipName>Related_Subjects</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
         <fullName>Subject__c</fullName>
         <label>Subject</label>
         <referenceTo>Contact</referenceTo>

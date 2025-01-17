@@ -8,5 +8,9 @@
         <plural>true</plural>
         <value>Quick Links</value>
     </caseValues>
+    <fields>
+        <label></label>
+        <name>Link_URL__c</name>
+    </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

@@ -13,6 +13,10 @@
         <name>DOBs__c</name>
         <relationshipLabel></relationshipLabel>
     </fields>
+    <fields>
+        <label></label>
+        <name>Date_of_Birth__c</name>
+    </fields>
     <layouts>
         <layout>DOB Layout</layout>
         <sections>

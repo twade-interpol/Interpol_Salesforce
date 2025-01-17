@@ -156,6 +156,19 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>INTERPOL_Inquiry__c</fullName>
+        <label>INTERPOL Inquiry</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Inquiry Subjects</relationshipLabel>
+        <relationshipName>Inquiry_Subjects</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
         <fullName>Subject__c</fullName>
         <label>Subject</label>
         <referenceTo>Contact</referenceTo>

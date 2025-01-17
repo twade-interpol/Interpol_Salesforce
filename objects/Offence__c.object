@@ -160,6 +160,1252 @@
     <enableStreamingApi>false</enableStreamingApi>
     <externalSharingModel>Read</externalSharingModel>
     <fields>
+        <fullName>OFFENCE_ID__c</fullName>
+        <label>OFFENCE_ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>OFFENCE__c</fullName>
+        <label>OFFENCE</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Offence_List__c</fullName>
+        <label>Offence List</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <controllingField>Offense_Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Assault</fullName>
+                    <default>false</default>
+                    <label>Assault</label>
+                </value>
+                <value>
+                    <fullName>Aggravated Assault</fullName>
+                    <default>false</default>
+                    <label>Aggravated Assault</label>
+                </value>
+                <value>
+                    <fullName>Sexual Assault</fullName>
+                    <default>false</default>
+                    <label>Sexual Assault</label>
+                </value>
+                <value>
+                    <fullName>Burglary</fullName>
+                    <default>false</default>
+                    <label>Burglary</label>
+                </value>
+                <value>
+                    <fullName>Breaking and Entering</fullName>
+                    <default>false</default>
+                    <label>Breaking and Entering</label>
+                </value>
+                <value>
+                    <fullName>Drug Related Crimes</fullName>
+                    <default>false</default>
+                    <label>Drug Related Crimes</label>
+                </value>
+                <value>
+                    <fullName>Drug Possession/Use</fullName>
+                    <default>false</default>
+                    <label>Drug Possession/Use</label>
+                </value>
+                <value>
+                    <fullName>Drug Trafficking</fullName>
+                    <default>false</default>
+                    <label>Drug Trafficking</label>
+                </value>
+                <value>
+                    <fullName>Harboring a Fugitive</fullName>
+                    <default>false</default>
+                    <label>Harboring a Fugitive</label>
+                </value>
+                <value>
+                    <fullName>Homicide/Murder</fullName>
+                    <default>false</default>
+                    <label>Homicide/Murder</label>
+                </value>
+                <value>
+                    <fullName>Attempted Murder</fullName>
+                    <default>false</default>
+                    <label>Attempted Murder</label>
+                </value>
+                <value>
+                    <fullName>Manslaughter</fullName>
+                    <default>false</default>
+                    <label>Manslaughter</label>
+                </value>
+                <value>
+                    <fullName>Vehicular Manslaughter</fullName>
+                    <default>false</default>
+                    <label>Vehicular Manslaughter</label>
+                </value>
+                <value>
+                    <fullName>Human Smuggling</fullName>
+                    <default>false</default>
+                    <label>Human Smuggling</label>
+                </value>
+                <value>
+                    <fullName>Human Trafficking</fullName>
+                    <default>false</default>
+                    <label>Human Trafficking</label>
+                </value>
+                <value>
+                    <fullName>Missing Person</fullName>
+                    <default>false</default>
+                    <label>Missing Person</label>
+                </value>
+                <value>
+                    <fullName>Adult</fullName>
+                    <default>false</default>
+                    <label>Adult</label>
+                </value>
+                <value>
+                    <fullName>Juvenile</fullName>
+                    <default>false</default>
+                    <label>Juvenile</label>
+                </value>
+                <value>
+                    <fullName>Non-Payment of Alimony</fullName>
+                    <default>false</default>
+                    <label>Non-Payment of Alimony</label>
+                </value>
+                <value>
+                    <fullName>Organized Crime</fullName>
+                    <default>false</default>
+                    <label>Organized Crime</label>
+                </value>
+                <value>
+                    <fullName>Crimes against Humanity/War Crimes/Genocide</fullName>
+                    <default>false</default>
+                    <label>Crimes against Humanity/War Crimes/Genocide</label>
+                </value>
+                <value>
+                    <fullName>Crimes on the High Seas</fullName>
+                    <default>false</default>
+                    <label>Crimes on the High Seas</label>
+                </value>
+                <value>
+                    <fullName>Gang Membership</fullName>
+                    <default>false</default>
+                    <label>Gang Membership</label>
+                </value>
+                <value>
+                    <fullName>Kidnapping</fullName>
+                    <default>false</default>
+                    <label>Kidnapping</label>
+                </value>
+                <value>
+                    <fullName>Prisoner Transfer</fullName>
+                    <default>false</default>
+                    <label>Prisoner Transfer</label>
+                </value>
+                <value>
+                    <fullName>Prostitution/Pimping</fullName>
+                    <default>false</default>
+                    <label>Prostitution/Pimping</label>
+                </value>
+                <value>
+                    <fullName>Rape</fullName>
+                    <default>false</default>
+                    <label>Rape</label>
+                </value>
+                <value>
+                    <fullName>Robbery</fullName>
+                    <default>false</default>
+                    <label>Robbery</label>
+                </value>
+                <value>
+                    <fullName>Person</fullName>
+                    <default>false</default>
+                    <label>Person</label>
+                </value>
+                <value>
+                    <fullName>Residential</fullName>
+                    <default>false</default>
+                    <label>Residential</label>
+                </value>
+                <value>
+                    <fullName>Smuggling</fullName>
+                    <default>false</default>
+                    <label>Smuggling</label>
+                </value>
+                <value>
+                    <fullName>Contraband</fullName>
+                    <default>false</default>
+                    <label>Contraband</label>
+                </value>
+                <value>
+                    <fullName>Sex Trafficking</fullName>
+                    <default>false</default>
+                    <label>Sex Trafficking</label>
+                </value>
+                <value>
+                    <fullName>Jewelry</fullName>
+                    <default>false</default>
+                    <label>Jewelry</label>
+                </value>
+                <value>
+                    <fullName>Pick pocketing</fullName>
+                    <default>false</default>
+                    <label>Pick pocketing</label>
+                </value>
+                <value>
+                    <fullName>Purse Snatching</fullName>
+                    <default>false</default>
+                    <label>Purse Snatching</label>
+                </value>
+                <value>
+                    <fullName>Shoplifting</fullName>
+                    <default>false</default>
+                    <label>Shoplifting</label>
+                </value>
+                <value>
+                    <fullName>Abuse/Molestation</fullName>
+                    <default>false</default>
+                    <label>Abuse/Molestation</label>
+                </value>
+                <value>
+                    <fullName>Child Support-non payment</fullName>
+                    <default>false</default>
+                    <label>Child Support-non payment</label>
+                </value>
+                <value>
+                    <fullName>Parental Abduction</fullName>
+                    <default>false</default>
+                    <label>Parental Abduction</label>
+                </value>
+                <value>
+                    <fullName>Non-Parental Abduction</fullName>
+                    <default>false</default>
+                    <label>Non-Parental Abduction</label>
+                </value>
+                <value>
+                    <fullName>Pornography</fullName>
+                    <default>false</default>
+                    <label>Pornography</label>
+                </value>
+                <value>
+                    <fullName>Rape of Child</fullName>
+                    <default>false</default>
+                    <label>Rape of Child</label>
+                </value>
+                <value>
+                    <fullName>Sex Offender Travel</fullName>
+                    <default>false</default>
+                    <label>Sex Offender Travel</label>
+                </value>
+                <value>
+                    <fullName>Environmental Crime</fullName>
+                    <default>false</default>
+                    <label>Environmental Crime</label>
+                </value>
+                <value>
+                    <fullName>Hazardous Waste</fullName>
+                    <default>false</default>
+                    <label>Hazardous Waste</label>
+                </value>
+                <value>
+                    <fullName>Plants</fullName>
+                    <default>false</default>
+                    <label>Plants</label>
+                </value>
+                <value>
+                    <fullName>Wildlife</fullName>
+                    <default>false</default>
+                    <label>Wildlife</label>
+                </value>
+                <value>
+                    <fullName>Extortion/Blackmail/Intimidation/Stalking</fullName>
+                    <default>false</default>
+                    <label>Extortion/Blackmail/Intimidation/Stalking</label>
+                </value>
+                <value>
+                    <fullName>Checks-insufficient funds/counterfeit</fullName>
+                    <default>false</default>
+                    <label>Checks-insufficient funds/counterfeit</label>
+                </value>
+                <value>
+                    <fullName>Currency</fullName>
+                    <default>false</default>
+                    <label>Currency</label>
+                </value>
+                <value>
+                    <fullName>Pharmaceutical</fullName>
+                    <default>false</default>
+                    <label>Pharmaceutical</label>
+                </value>
+                <value>
+                    <fullName>Bank Fraud</fullName>
+                    <default>false</default>
+                    <label>Bank Fraud</label>
+                </value>
+                <value>
+                    <fullName>Embezzlement/Swindling</fullName>
+                    <default>false</default>
+                    <label>Embezzlement/Swindling</label>
+                </value>
+                <value>
+                    <fullName>Romance Fraud</fullName>
+                    <default>false</default>
+                    <label>Romance Fraud</label>
+                </value>
+                <value>
+                    <fullName>Student Loan Fraud</fullName>
+                    <default>false</default>
+                    <label>Student Loan Fraud</label>
+                </value>
+                <value>
+                    <fullName>Gambling</fullName>
+                    <default>false</default>
+                    <label>Gambling</label>
+                </value>
+                <value>
+                    <fullName>Illegal Establishment</fullName>
+                    <default>false</default>
+                    <label>Illegal Establishment</label>
+                </value>
+                <value>
+                    <fullName>Illegal Gambling</fullName>
+                    <default>false</default>
+                    <label>Illegal Gambling</label>
+                </value>
+                <value>
+                    <fullName>Property Crimes</fullName>
+                    <default>false</default>
+                    <label>Property Crimes</label>
+                </value>
+                <value>
+                    <fullName>Arson</fullName>
+                    <default>false</default>
+                    <label>Arson</label>
+                </value>
+                <value>
+                    <fullName>Bribery/Corruption</fullName>
+                    <default>false</default>
+                    <label>Bribery/Corruption</label>
+                </value>
+                <value>
+                    <fullName>Bribery</fullName>
+                    <default>false</default>
+                    <label>Bribery</label>
+                </value>
+                <value>
+                    <fullName>Burglary- Business</fullName>
+                    <default>false</default>
+                    <label>Burglary- Business</label>
+                </value>
+                <value>
+                    <fullName>Counterfeiting/Forgery</fullName>
+                    <default>false</default>
+                    <label>Counterfeiting/Forgery</label>
+                </value>
+                <value>
+                    <fullName>Credit Card</fullName>
+                    <default>false</default>
+                    <label>Credit Card</label>
+                </value>
+                <value>
+                    <fullName>Document Forgery</fullName>
+                    <default>false</default>
+                    <label>Document Forgery</label>
+                </value>
+                <value>
+                    <fullName>Travelers Checks- Stolen/Falsified/Counterfeit/Lost</fullName>
+                    <default>false</default>
+                    <label>Travelers Checks- Stolen/Falsified/Counterfeit/Lost</label>
+                </value>
+                <value>
+                    <fullName>Fraud</fullName>
+                    <default>false</default>
+                    <label>Fraud</label>
+                </value>
+                <value>
+                    <fullName>Commodity Fraud</fullName>
+                    <default>false</default>
+                    <label>Commodity Fraud</label>
+                </value>
+                <value>
+                    <fullName>Confidence Schemes</fullName>
+                    <default>false</default>
+                    <label>Confidence Schemes</label>
+                </value>
+                <value>
+                    <fullName>Insurance</fullName>
+                    <default>false</default>
+                    <label>Insurance</label>
+                </value>
+                <value>
+                    <fullName>Internet Fraud</fullName>
+                    <default>false</default>
+                    <label>Internet Fraud</label>
+                </value>
+                <value>
+                    <fullName>Mail</fullName>
+                    <default>false</default>
+                    <label>Mail</label>
+                </value>
+                <value>
+                    <fullName>Money Laundering</fullName>
+                    <default>false</default>
+                    <label>Money Laundering</label>
+                </value>
+                <value>
+                    <fullName>Passport Fraud/Counterfeiting/Falsification</fullName>
+                    <default>false</default>
+                    <label>Passport Fraud/Counterfeiting/Falsification</label>
+                </value>
+                <value>
+                    <fullName>Property Fraud</fullName>
+                    <default>false</default>
+                    <label>Property Fraud</label>
+                </value>
+                <value>
+                    <fullName>Securities/Stocks-Counterfieting/Fraud/Stolen</fullName>
+                    <default>false</default>
+                    <label>Securities/Stocks-Counterfieting/Fraud/Stolen</label>
+                </value>
+                <value>
+                    <fullName>Tax Evasion</fullName>
+                    <default>false</default>
+                    <label>Tax Evasion</label>
+                </value>
+                <value>
+                    <fullName>Wire Fraud</fullName>
+                    <default>false</default>
+                    <label>Wire Fraud</label>
+                </value>
+                <value>
+                    <fullName>Motor Vehicle Theft</fullName>
+                    <default>false</default>
+                    <label>Motor Vehicle Theft</label>
+                </value>
+                <value>
+                    <fullName>Art Forgery</fullName>
+                    <default>false</default>
+                    <label>Art Forgery</label>
+                </value>
+                <value>
+                    <fullName>Antiques</fullName>
+                    <default>false</default>
+                    <label>Antiques</label>
+                </value>
+                <value>
+                    <fullName>Archeological Objects</fullName>
+                    <default>false</default>
+                    <label>Archeological Objects</label>
+                </value>
+                <value>
+                    <fullName>Paintings/Sculptures</fullName>
+                    <default>false</default>
+                    <label>Paintings/Sculptures</label>
+                </value>
+                <value>
+                    <fullName>Stamps</fullName>
+                    <default>false</default>
+                    <label>Stamps</label>
+                </value>
+                <value>
+                    <fullName>Beastiality</fullName>
+                    <default>false</default>
+                    <label>Beastiality</label>
+                </value>
+                <value>
+                    <fullName>Terrorism</fullName>
+                    <default>false</default>
+                    <label>Terrorism</label>
+                </value>
+                <value>
+                    <fullName>Explosives Possession/Use</fullName>
+                    <default>false</default>
+                    <label>Explosives Possession/Use</label>
+                </value>
+                <value>
+                    <fullName>Explosives Trafficking</fullName>
+                    <default>false</default>
+                    <label>Explosives Trafficking</label>
+                </value>
+                <value>
+                    <fullName>Hijack Aircraft</fullName>
+                    <default>false</default>
+                    <label>Hijack Aircraft</label>
+                </value>
+                <value>
+                    <fullName>Threat to Bomb</fullName>
+                    <default>false</default>
+                    <label>Threat to Bomb</label>
+                </value>
+                <value>
+                    <fullName>Weapons</fullName>
+                    <default>false</default>
+                    <label>Weapons</label>
+                </value>
+                <value>
+                    <fullName>Possession/Use</fullName>
+                    <default>false</default>
+                    <label>Possession/Use</label>
+                </value>
+                <value>
+                    <fullName>Seized/Traced</fullName>
+                    <default>false</default>
+                    <label>Seized/Traced</label>
+                </value>
+                <value>
+                    <fullName>Stolen</fullName>
+                    <default>false</default>
+                    <label>Stolen</label>
+                </value>
+                <value>
+                    <fullName>Trafficked</fullName>
+                    <default>false</default>
+                    <label>Trafficked</label>
+                </value>
+                <value>
+                    <fullName>Computer Fraud/Abuse</fullName>
+                    <default>false</default>
+                    <label>Computer Fraud/Abuse</label>
+                </value>
+                <value>
+                    <fullName>Pharming</fullName>
+                    <default>false</default>
+                    <label>Pharming</label>
+                </value>
+                <value>
+                    <fullName>Phishing</fullName>
+                    <default>false</default>
+                    <label>Phishing</label>
+                </value>
+                <value>
+                    <fullName>Cryptojacking</fullName>
+                    <default>false</default>
+                    <label>Cryptojacking</label>
+                </value>
+                <value>
+                    <fullName>Death Notification</fullName>
+                    <default>false</default>
+                    <label>Death Notification</label>
+                </value>
+                <value>
+                    <fullName>Health and Welfare Check</fullName>
+                    <default>false</default>
+                    <label>Health and Welfare Check</label>
+                </value>
+                <value>
+                    <fullName>Notification of serious illness/accident</fullName>
+                    <default>false</default>
+                    <label>Notification of serious illness/accident</label>
+                </value>
+                <value>
+                    <fullName>Suicide</fullName>
+                    <default>false</default>
+                    <label>Suicide</label>
+                </value>
+                <value>
+                    <fullName>Threats</fullName>
+                    <default>false</default>
+                    <label>Threats</label>
+                </value>
+                <value>
+                    <fullName>Death Threat</fullName>
+                    <default>false</default>
+                    <label>Death Threat</label>
+                </value>
+                <value>
+                    <fullName>School Shooting</fullName>
+                    <default>false</default>
+                    <label>School Shooting</label>
+                </value>
+                <value>
+                    <fullName>Threat Against Federal Protectees</fullName>
+                    <default>false</default>
+                    <label>Threat Against Federal Protectees</label>
+                </value>
+                <value>
+                    <fullName>Threat to Others</fullName>
+                    <default>false</default>
+                    <label>Threat to Others</label>
+                </value>
+                <value>
+                    <fullName>Administrative</fullName>
+                    <default>false</default>
+                    <label>Administrative</label>
+                </value>
+                <value>
+                    <fullName>DNA Profile Search</fullName>
+                    <default>false</default>
+                    <label>DNA Profile Search</label>
+                </value>
+                <value>
+                    <fullName>Europol</fullName>
+                    <default>false</default>
+                    <label>Europol</label>
+                </value>
+                <value>
+                    <fullName>Other-CCF</fullName>
+                    <default>false</default>
+                    <label>Other-CCF</label>
+                </value>
+                <value>
+                    <fullName>Other-NDTF</fullName>
+                    <default>false</default>
+                    <label>Other-NDTF</label>
+                </value>
+                <value>
+                    <fullName>Reason for Request</fullName>
+                    <default>false</default>
+                    <label>Reason for Request</label>
+                </value>
+                <value>
+                    <fullName>Sporting Event</fullName>
+                    <default>false</default>
+                    <label>Sporting Event</label>
+                </value>
+                <value>
+                    <fullName>Unidentified Person</fullName>
+                    <default>false</default>
+                    <label>Unidentified Person</label>
+                </value>
+                <value>
+                    <fullName>Department of Treasury</fullName>
+                    <default>false</default>
+                    <label>Department of Treasury</label>
+                </value>
+                <value>
+                    <fullName>IRS Check/Violation</fullName>
+                    <default>false</default>
+                    <label>IRS Check/Violation</label>
+                </value>
+                <value>
+                    <fullName>Department of State</fullName>
+                    <default>false</default>
+                    <label>Department of State</label>
+                </value>
+                <value>
+                    <fullName>Lost/Stolen Passports</fullName>
+                    <default>false</default>
+                    <label>Lost/Stolen Passports</label>
+                </value>
+                <value>
+                    <fullName>Homeland Security</fullName>
+                    <default>false</default>
+                    <label>Homeland Security</label>
+                </value>
+                <value>
+                    <fullName>Citizenship Check/Claims</fullName>
+                    <default>false</default>
+                    <label>Citizenship Check/Claims</label>
+                </value>
+                <value>
+                    <fullName>Customs Check/Violation</fullName>
+                    <default>false</default>
+                    <label>Customs Check/Violation</label>
+                </value>
+                <value>
+                    <fullName>Immigration Check/Violation</fullName>
+                    <default>false</default>
+                    <label>Immigration Check/Violation</label>
+                </value>
+                <value>
+                    <fullName>Theft</fullName>
+                    <default>false</default>
+                    <label>Theft</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>U.S. Federal Agency Checks</controllingFieldValue>
+                <valueName>Department of Treasury</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Federal Agency Checks</controllingFieldValue>
+                <valueName>IRS Check/Violation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Federal Agency Checks</controllingFieldValue>
+                <valueName>Department of State</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Federal Agency Checks</controllingFieldValue>
+                <valueName>Lost/Stolen Passports</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Federal Agency Checks</controllingFieldValue>
+                <valueName>Homeland Security</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Federal Agency Checks</controllingFieldValue>
+                <valueName>Citizenship Check/Claims</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Federal Agency Checks</controllingFieldValue>
+                <valueName>Customs Check/Violation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>U.S. Federal Agency Checks</controllingFieldValue>
+                <valueName>Immigration Check/Violation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Assault</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Aggravated Assault</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Sexual Assault</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Burglary</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Breaking and Entering</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Drug Related Crimes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Drug Possession/Use</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Drug Trafficking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Harboring a Fugitive</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Homicide/Murder</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Attempted Murder</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Manslaughter</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Vehicular Manslaughter</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Human Smuggling</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Human Trafficking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Missing Person</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Adult</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Juvenile</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Non-Payment of Alimony</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Organized Crime</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Crimes against Humanity/War Crimes/Genocide</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Crimes on the High Seas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Gang Membership</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <controllingFieldValue>Crimes Against Children</controllingFieldValue>
+                <valueName>Kidnapping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Prisoner Transfer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Prostitution/Pimping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Rape</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Robbery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Person</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Residential</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Smuggling</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Contraband</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Sex Trafficking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Jewelry</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Pick pocketing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Purse Snatching</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Persons</controllingFieldValue>
+                <valueName>Shoplifting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Children</controllingFieldValue>
+                <valueName>Abuse/Molestation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Children</controllingFieldValue>
+                <valueName>Child Support-non payment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Children</controllingFieldValue>
+                <valueName>Parental Abduction</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Children</controllingFieldValue>
+                <valueName>Non-Parental Abduction</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Children</controllingFieldValue>
+                <valueName>Pornography</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Children</controllingFieldValue>
+                <valueName>Rape of Child</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Children</controllingFieldValue>
+                <valueName>Sex Offender Travel</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Environment</controllingFieldValue>
+                <valueName>Environmental Crime</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Environment</controllingFieldValue>
+                <valueName>Hazardous Waste</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Environment</controllingFieldValue>
+                <valueName>Plants</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Environment</controllingFieldValue>
+                <valueName>Wildlife</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Extortion/Blackmail/Intimidation/Stalking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Checks-insufficient funds/counterfeit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Currency</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Pharmaceutical</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Bank Fraud</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Embezzlement/Swindling</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Romance Fraud</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Student Loan Fraud</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Gambling</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Illegal Establishment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Illegal Gambling</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Property Crimes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Arson</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Bribery/Corruption</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Bribery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Burglary- Business</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Counterfeiting/Forgery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Credit Card</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Document Forgery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Travelers Checks- Stolen/Falsified/Counterfeit/Lost</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Fraud</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Commodity Fraud</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Confidence Schemes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Insurance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Internet Fraud</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Mail</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Money Laundering</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Passport Fraud/Counterfeiting/Falsification</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Property Fraud</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Securities/Stocks-Counterfieting/Fraud/Stolen</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Tax Evasion</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Wire Fraud</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Property, Businesses, or Government</controllingFieldValue>
+                <valueName>Motor Vehicle Theft</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving Works of Art</controllingFieldValue>
+                <valueName>Art Forgery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving Works of Art</controllingFieldValue>
+                <valueName>Antiques</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving Works of Art</controllingFieldValue>
+                <valueName>Archeological Objects</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving Works of Art</controllingFieldValue>
+                <valueName>Paintings/Sculptures</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving Works of Art</controllingFieldValue>
+                <valueName>Stamps</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving Works of Art</controllingFieldValue>
+                <valueName>Theft</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Against Animals</controllingFieldValue>
+                <valueName>Beastiality</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving the use of Weapons or Explosives</controllingFieldValue>
+                <valueName>Terrorism</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving the use of Weapons or Explosives</controllingFieldValue>
+                <valueName>Explosives Possession/Use</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving the use of Weapons or Explosives</controllingFieldValue>
+                <valueName>Explosives Trafficking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving the use of Weapons or Explosives</controllingFieldValue>
+                <valueName>Hijack Aircraft</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving the use of Weapons or Explosives</controllingFieldValue>
+                <valueName>Threat to Bomb</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving the use of Weapons or Explosives</controllingFieldValue>
+                <valueName>Weapons</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving the use of Weapons or Explosives</controllingFieldValue>
+                <valueName>Possession/Use</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving the use of Weapons or Explosives</controllingFieldValue>
+                <valueName>Seized/Traced</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving the use of Weapons or Explosives</controllingFieldValue>
+                <valueName>Stolen</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Crimes Involving the use of Weapons or Explosives</controllingFieldValue>
+                <valueName>Trafficked</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cyber Crimes</controllingFieldValue>
+                <valueName>Computer Fraud/Abuse</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cyber Crimes</controllingFieldValue>
+                <valueName>Pharming</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cyber Crimes</controllingFieldValue>
+                <valueName>Phishing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cyber Crimes</controllingFieldValue>
+                <valueName>Cryptojacking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Humanitarian</controllingFieldValue>
+                <valueName>Death Notification</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Humanitarian</controllingFieldValue>
+                <valueName>Health and Welfare Check</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Humanitarian</controllingFieldValue>
+                <valueName>Notification of serious illness/accident</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Humanitarian</controllingFieldValue>
+                <valueName>Suicide</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Humanitarian</controllingFieldValue>
+                <valueName>Threats</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Humanitarian</controllingFieldValue>
+                <valueName>Death Threat</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Humanitarian</controllingFieldValue>
+                <valueName>School Shooting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Humanitarian</controllingFieldValue>
+                <valueName>Threat Against Federal Protectees</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Humanitarian</controllingFieldValue>
+                <valueName>Threat to Others</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>Administrative</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>DNA Profile Search</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>Europol</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>Other-CCF</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>Other-NDTF</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>Reason for Request</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>Sporting Event</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>Unidentified Person</valueName>
+            </valueSettings>
+        </valueSet>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Offense_Type__c</fullName>
+        <label>Offense Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Crimes Against Persons</fullName>
+                    <default>false</default>
+                    <label>Crimes Against Persons</label>
+                </value>
+                <value>
+                    <fullName>Crimes Against Children</fullName>
+                    <default>false</default>
+                    <label>Crimes Against Children</label>
+                </value>
+                <value>
+                    <fullName>Crimes Against Environment</fullName>
+                    <default>false</default>
+                    <label>Crimes Against Environment</label>
+                </value>
+                <value>
+                    <fullName>Crimes Against Property, Businesses, or Government</fullName>
+                    <default>false</default>
+                    <label>Crimes Against Property, Businesses, or Government</label>
+                </value>
+                <value>
+                    <fullName>Crimes Involving Works of Art</fullName>
+                    <default>false</default>
+                    <label>Crimes Involving Works of Art</label>
+                </value>
+                <value>
+                    <fullName>Crimes Against Animals</fullName>
+                    <default>false</default>
+                    <label>Crimes Against Animals</label>
+                </value>
+                <value>
+                    <fullName>Crimes Involving the use of Weapons or Explosives</fullName>
+                    <default>false</default>
+                    <label>Crimes Involving the use of Weapons or Explosives</label>
+                </value>
+                <value>
+                    <fullName>Cyber Crimes</fullName>
+                    <default>false</default>
+                    <label>Cyber Crimes</label>
+                </value>
+                <value>
+                    <fullName>Humanitarian</fullName>
+                    <default>false</default>
+                    <label>Humanitarian</label>
+                </value>
+                <value>
+                    <fullName>Miscellaneous</fullName>
+                    <default>false</default>
+                    <label>Miscellaneous</label>
+                </value>
+                <value>
+                    <fullName>U.S. Federal Agency Checks</fullName>
+                    <default>false</default>
+                    <label>U.S. Federal Agency Checks</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Offenses__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <label>Offenses</label>
