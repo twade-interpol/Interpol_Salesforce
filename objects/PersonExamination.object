@@ -187,12 +187,28 @@
     <searchLayouts>
         <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Examination</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EffectiveFrom</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EffectiveTo</customTabListAdditionalFields>
+        <customTabListAdditionalFields>VerificationStatus</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>LastModifiedBy</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>LastModifiedDate</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Examination</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EffectiveFrom</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EffectiveTo</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>VerificationStatus</lookupDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>LastModifiedBy</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>LastModifiedDate</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Examination</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EffectiveFrom</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EffectiveTo</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>VerificationStatus</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Examination</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EffectiveFrom</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EffectiveTo</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>VerificationStatus</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
 </CustomObject>

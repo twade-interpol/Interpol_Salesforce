@@ -130,21 +130,6 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
-        <fullName>Direction</fullName>
-        <inlineHelpText>Specifies whether the org is receiving or sending the document.</inlineHelpText>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>DocumentNumber</fullName>
-        <inlineHelpText>Unique document identification number.</inlineHelpText>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>IsActive</fullName>
-        <inlineHelpText>Specifies whether or not the document is active.</inlineHelpText>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
         <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -152,16 +137,6 @@
         <fullName>OwnerId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Priority</fullName>
-        <inlineHelpText>Determines the order in which the document is processed when it is part of a queue.</inlineHelpText>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>Source</fullName>
-        <inlineHelpText>Origin of the incoming document. Can be used to specify processing priority.</inlineHelpText>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Status</fullName>
@@ -173,35 +148,10 @@
         <inlineHelpText>Reason for the status when processing and transforming the document.</inlineHelpText>
         <trackHistory>false</trackHistory>
     </fields>
-    <listViews>
-        <fullName>All_ReceivedDocuments</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All Received Documents</label>
-    </listViews>
     <searchLayouts>
-        <customTabListAdditionalFields>DocumentNumber</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Priority</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Source</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Direction</customTabListAdditionalFields>
-        <customTabListAdditionalFields>IsActive</customTabListAdditionalFields>
         <customTabListAdditionalFields>Owner</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>DocumentNumber</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Priority</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Source</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Direction</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>IsActive</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Owner</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>DocumentNumber</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Priority</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Source</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Direction</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>IsActive</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Owner</lookupPhoneDialogsAdditionalFields>
-        <searchResultsAdditionalFields>DocumentNumber</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Priority</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Source</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Direction</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>IsActive</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Owner</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>

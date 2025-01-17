@@ -150,6 +150,9 @@
         <fullName>HasDocGenFontSource</fullName>
     </fields>
     <fields>
+        <fullName>PdfDocIdentifiersList</fullName>
+    </fields>
+    <fields>
         <fullName>ReferenceObject</fullName>
     </fields>
     <fields>

@@ -22,7 +22,6 @@
     <enablePartyProfileParentSharingOrgPref>false</enablePartyProfileParentSharingOrgPref>
     <enablePartyprofParentMultiSharingOrgPref>false</enablePartyprofParentMultiSharingOrgPref>
     <enableProgramCohorts>false</enableProgramCohorts>
-    <enableScoringFrameworkOrgPref>false</enableScoringFrameworkOrgPref>
     <enableTimelinePref>false</enableTimelinePref>
     <enableVisitCalendarSync>false</enableVisitCalendarSync>
     <enableVisitInventoryEnabled>false</enableVisitInventoryEnabled>

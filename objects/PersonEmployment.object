@@ -177,11 +177,6 @@
         <fullName>StartDate</fullName>
         <trackHistory>false</trackHistory>
     </fields>
-    <listViews>
-        <fullName>All_PersonEmployment</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All Person Employment</label>
-    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Position</customTabListAdditionalFields>
         <customTabListAdditionalFields>Occupation</customTabListAdditionalFields>

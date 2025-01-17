@@ -130,6 +130,11 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>AdvancementGraduationDate</fullName>
+        <inlineHelpText>The date of the person&apos;s first graduation from your institution.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>BirthPlace</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -140,6 +145,11 @@
     </fields>
     <fields>
         <fullName>Ethnicity</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GenerationalCohort</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>

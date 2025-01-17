@@ -200,4 +200,10 @@
     <fields>
         <fullName>TransactionAmount</fullName>
     </fields>
+    <fields>
+        <fullName>UniqueIdentifier</fullName>
+    </fields>
+    <fields>
+        <fullName>UsageType</fullName>
+    </fields>
 </CustomObject>
