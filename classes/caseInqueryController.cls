@@ -13,12 +13,13 @@ public with sharing class caseInqueryController {
     }
 
      /*This is the Search Inquiry query.*/
-    @AuraEnabled
+ /*   @AuraEnabled
     public static List<Case> searchInquiry(String searchString){
         List<List<SObject>> inquiries = [FIND :searchString IN ALL FIELDS RETURNING Case(Id, CaseNumber, Type, Subject, Status,
         Priority, Type_Of_Notification__c, Sender__c, To__c, CC__c, Received_On__c, Owning_Division__c)];
         return (List<Case>) inquiries[0];
     }
+*/
 
     /*This is the Property query.*/
     @AuraEnabled
