@@ -9,15 +9,15 @@
         <value>Benefit Recertification Flow</value>
     </caseValues>
     <fields>
-        <label><!-- Language --></label>
+        <label></label>
         <name>Language__c</name>
     </fields>
     <fields>
-        <label><!-- SubType --></label>
+        <label></label>
         <name>SubType__c</name>
     </fields>
     <fields>
-        <label><!-- Type --></label>
+        <label></label>
         <name>Type__c</name>
     </fields>
     <startsWith>Consonant</startsWith>
