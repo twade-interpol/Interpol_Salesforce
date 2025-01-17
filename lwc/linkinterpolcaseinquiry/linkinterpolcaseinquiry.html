@@ -1,0 +1,170 @@
+<template>
+<!-- <lightning-input value={passedrecord}></lightning-input>  -->
+
+
+
+
+    <article class="slds-card" style="height: min-content;width: 60%;align-self: center;margin-left: 20%;" >
+     <div class="slds-m-around_medium">
+
+    <h1 slot="title" style="font-size: 21px;text-align: center;">
+            {headertitle}
+            <hr style="margin-block:0rem">
+       <!--      <template if:true={show}>
+                please fill Below fields 
+             </template>
+              <template if:true={emptyres}>
+                click on button to create a new 
+             </template> -->
+        </h1>
+
+<!--
+           <lightning-record-edit-form
+                object-api-name={objectApiName}
+                onsuccess={handleSuccess}
+                onerror={handleError}
+                onsubmit={handleSubmit}
+            >
+            -->
+
+               <lightning-record-edit-form
+                object-api-name={objectApiName}
+                mode="edit"
+                onsuccess={handleSuccessacc}
+                onerror={handleError}
+
+            >
+
+<!--
+              <template for:each={rofields} for:item="field">
+                    <div key={field} class=" slds-grid label-inline">
+                        <div class="slds-col slds-size_11-of-12 slds-form-element slds-form-element_horizontal" style=" padding-bottom: 2.25%">
+                    <lightning-input-field field-name={field} key={field}></lightning-input-field>
+                        </div>
+                    </div>
+                </template>
+-->
+
+                <template for:each={lfields} for:item="field">
+                    <div key={field} class=" slds-grid label-inline">
+                        <div class="slds-col slds-size_5-of-12 slds-form-element slds-form-element_horizontal" style=" padding-bottom: 2.25%">
+                
+                    <lightning-input-field field-name={field} key={field} value={interpolcaseid}></lightning-input-field> 
+                     <!--  <lightning-input-field field-name={field} key={field} ></lightning-input-field> -->
+                        </div>
+                   <div class="slds-col slds-size_3-of-12">
+                                        <!-- "New" button -->
+                <!--    <div class="slds-text-align_right slds-m-top_x-small">  -->
+
+                       <template if:true={showButton}> <!-- Logic to show button -->
+                        <lightning-button
+                            label="Create New INTERPOL Case"
+                            title="Create New INTERPOL Case"
+                            onclick={handlcaseadd}>
+                        </lightning-button>
+                       </template>
+
+
+                       <!--
+                          <lightning-button
+                            label="Create New INTERPOL Case"
+                            title="Create New INTERPOL Case"
+                            onclick={handlcaseadd}>
+                        </lightning-button>
+                      -->
+                    
+
+
+
+                  <!--  </div>  -->
+                        
+                     <!--   <lightning-button-icon variant="bare" icon-name="utility:add" onclick={handlcaseadd}  alternative-text="Create new INTERPOL Case" >
+                        </lightning-button-icon>
+                        -->
+                    </div>
+                    </div>
+                </template>
+
+
+                <template for:each={rfields} for:item="field">
+
+
+                          <div key={field} class=" slds-grid label-inline">
+                        <div class="slds-col slds-size_5-of-12 slds-form-element slds-form-element_horizontal" style=" padding-bottom: 2.25%">
+                    <lightning-input-field field-name={field} key={field} value={inquiryid}></lightning-input-field> 
+                        </div>
+                    </div>
+
+
+                </template>
+
+
+                 <!--
+                <div class="slds-m-top_medium">
+                    <lightning-button variant="brand" type="submit" label="Save"></lightning-button>
+                    
+                </div>
+                -->
+
+                     <div class="slds-m-top_medium" style="padding-left: 35%;">
+            <lightning-button
+                class="slds-m-top_small"
+                label="Cancel"
+                onclick={handleCancel}
+            ></lightning-button>
+            &nbsp;&nbsp;
+            <lightning-button
+                class="slds-m-top_small"
+                variant="brand"
+                type="submit"
+                label="Save"
+            ></lightning-button>
+        </div>
+
+
+            
+            </lightning-record-edit-form>
+            </div>
+    </article>
+
+
+ <template if:true={isShowModal}>
+        
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Header-->
+        
+
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                        <lightning-icon
+                            icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" >
+                        </lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">New INTERPOL Case</h2>
+                </header>
+                <!-- input part-->
+                <div class="slds-modal__content slds-p-around_medium">
+        <lightning-record-form
+        object-api-name={objectApiName2}
+        fields={fulllist}
+        onsuccess={handleSuccess}
+        columns="2" 
+        mode="edit"
+        onsubmit={onSubmitHandler}
+        oncancel={closeModal}
+        >
+        </lightning-record-form>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+
+
+</template>
