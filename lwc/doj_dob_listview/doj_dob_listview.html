@@ -1,0 +1,26 @@
+<template>
+    <template if:true={showTable}>
+       
+        <lightning-card  title="Dob List View">
+
+          <lightning-button label="Create New Dob" onclick={goToCreateNewCaseForm}></lightning-button>
+          <lightning-button label="Update Selected Dob" onclick={handleCaseUpdate}></lightning-button>
+
+
+
+            <c-doj_compliant_-case_-list-view records={allRecords} 
+            total-records={allRecords.length} 
+            columns = {columns}
+            key-field="Id"
+            show-search-box="true"            
+            max-row-selection={allRecords.length}
+            onpaginatorchange={handlePaginatorChange}
+            onsetselectedrecords={handleAllSelectedRows}
+            show-row-number-column
+            table-height="200">
+        </c-doj_compliant_-case_-list-view>
+        </lightning-card>
+    </template>
+
+        
+</template>
