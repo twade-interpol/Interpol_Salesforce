@@ -56,6 +56,29 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Priority__c</fullName>
+        <label>Priority</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Non-Urgent</fullName>
+                    <default>true</default>
+                    <label>Non-Urgent</label>
+                </value>
+                <value>
+                    <fullName>Urgent</fullName>
+                    <default>false</default>
+                    <label>Urgent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>SharingOption</fullName>
         <trackHistory>true</trackHistory>
     </fields>
@@ -69,6 +92,28 @@
     <fields>
         <fullName>Title</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>doj_Message_Type__c</fullName>
+        <label>Message Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Miscellaneous</fullName>
+                    <default>false</default>
+                    <label>Miscellaneous</label>
+                </value>
+                <value>
+                    <fullName>Test</fullName>
+                    <default>false</default>
+                    <label>Test</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <searchLayouts>
         <searchResultsAdditionalFields>VERSION.TITLE</searchResultsAdditionalFields>
