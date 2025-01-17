@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Queries_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Provides users with the ability to associate external queries with &quot;INTERPOL Cases&quot; aka &quot;Complaint Cases&quot;</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Database__c</fullName>
+        <inlineHelpText>&quot;What database did you use to search?&quot;</inlineHelpText>
+        <label>Database</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>I-24/7</fullName>
+                    <default>false</default>
+                    <label>I-24/7</label>
+                </value>
+                <value>
+                    <fullName>NCIC</fullName>
+                    <default>false</default>
+                    <label>NCIC</label>
+                </value>
+                <value>
+                    <fullName>TECS</fullName>
+                    <default>false</default>
+                    <label>TECS</label>
+                </value>
+                <value>
+                    <fullName>CLEAR</fullName>
+                    <default>false</default>
+                    <label>CLEAR</label>
+                </value>
+                <value>
+                    <fullName>OIA Database</fullName>
+                    <default>false</default>
+                    <label>OIA Database</label>
+                </value>
+                <value>
+                    <fullName>IW-CWS</fullName>
+                    <default>false</default>
+                    <label>IW-CWS</label>
+                </value>
+                <value>
+                    <fullName>RISSNet</fullName>
+                    <default>false</default>
+                    <label>RISSNet</label>
+                </value>
+                <value>
+                    <fullName>Report Hub</fullName>
+                    <default>false</default>
+                    <label>Report Hub</label>
+                </value>
+                <value>
+                    <fullName>eASF2</fullName>
+                    <default>false</default>
+                    <label>eASF2</label>
+                </value>
+                <value>
+                    <fullName>Notice Processing Center</fullName>
+                    <default>false</default>
+                    <label>Notice Processing Center</label>
+                </value>
+                <value>
+                    <fullName>OIA Assignments</fullName>
+                    <default>false</default>
+                    <label>OIA Assignments</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INTERPOL_Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>INTERPOL Case</label>
+        <referenceTo>ComplaintCase</referenceTo>
+        <relationshipLabel>Queries</relationshipLabel>
+        <relationshipName>Queries</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Result__c</fullName>
+        <inlineHelpText>When you ran the query, did the result come back with a 
+
+Positive: A match or a result comes back outside of USNCB data
+
+Negative: No match or only match of USNCB Data
+
+Possible Match: Not Sure</inlineHelpText>
+        <label>Result</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Positive</fullName>
+                    <default>false</default>
+                    <label>Positive</label>
+                </value>
+                <value>
+                    <fullName>Negative</fullName>
+                    <default>false</default>
+                    <label>Negative</label>
+                </value>
+                <value>
+                    <fullName>Possible Match</fullName>
+                    <default>false</default>
+                    <label>Possible Match</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Search_Input_Criteria__c</fullName>
+        <inlineHelpText>Please copy and paste the information you queried in the respective external system</inlineHelpText>
+        <label>Search Input Criteria</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Search_Parameters__c</fullName>
+        <inlineHelpText>&quot;What key terms were used in your search?&quot;</inlineHelpText>
+        <label>Search Parameters</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Text__c</fullName>
+        <description>*****Need to create a validation rule. If the character limit is hit, inform the user to upload the query results as an attachment.*****</description>
+        <label>Text</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>USNCB_Result__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>Was the result only for USNCB data. (only for negative results)?</inlineHelpText>
+        <label>USNCB Result</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Queries</label>
+    <nameField>
+        <label>Query Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Queries</pluralLabel>
+    <searchLayouts />
+    <sharingModel>Read</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
