@@ -1,0 +1,40 @@
+<template>
+    <div class="slds-card slds-card_boundary slds-m-around_medium">
+        <div class="slds-page-header slds-page-header_joined slds-page-header_bleed slds-shrink-none test-headerRegion slds-is-relative">
+         <div class="slds-card__header slds-grid slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__figure"><lightning-icon size="small" icon-name="custom:custom32" alternative-text="Approved" title="Approved"></lightning-icon></div>
+        <h2 class="slds-card__header-title">Subject details : {subjectName}</h2>
+         </div>
+    </div>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-m-around_medium">
+                        <lightning-datatable
+                        key-field="Id"
+                        data={caserecordList}
+                        columns={columns}
+                        hide-checkbox-column="true"
+                        show-row-number-column="true">
+                        </lightning-datatable>  
+                </div> 
+            </div>
+    </div>
+    <!--<div class="slds-card slds-card_boundary slds-m-around_medium">
+        <div class="slds-page-header slds-page-header_joined slds-page-header_bleed slds-shrink-none test-headerRegion slds-is-relative">
+         <div class="slds-card__header slds-grid slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__figure"><lightning-icon size="small" icon-name="custom:custom32" alternative-text="Approved" title="Approved"></lightning-icon></div>
+        <h2 class="slds-card__header-title">Interpol Inquiries</h2>
+         </div>
+    </div>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-m-around_medium">
+                        <lightning-datatable
+                        key-field="Id"
+                        data={aliasrecords}
+                        columns={aliascolumns}
+                        hide-checkbox-column="true"
+                        show-row-number-column="true">
+                        </lightning-datatable>  
+                </div> 
+            </div>
+    </div>-->
+</template>
