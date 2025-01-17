@@ -1,0 +1,36 @@
+<template>
+    <template if:true={showTable}>
+      <div class="slds-box" style="background-color: rgb(4, 61, 127);">
+       <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_12-of-12 slds-align_absolute-left"> 
+       
+        <lightning-card  title="INTERPOL Cases">
+           <lightning-button variant="brand" label="Create New INTERPOL Case" onclick={goToCreateNewCaseForm} class="slds-m-left_x-small"></lightning-button>
+           <lightning-button variant="success" label="Update Selected INTERPOL Case" onclick={handleCaseUpdate} class="slds-m-left_x-small"></lightning-button>
+           <lightning-button variant="destructive" label="Case Closure Checklist" onclick={handleshowQuestions} class="slds-m-left_x-small"></lightning-button>
+
+          <br>
+            <c-doj_compliant_-case_-list-view records={allRecords} 
+            total-records={allRecords.length} 
+            columns = {columns}
+            key-field="Id"
+            show-search-box="true"            
+            max-row-selection={allRecords.length}
+            onpaginatorchange={handlePaginatorChange}
+            onsetselectedrecords={handleAllSelectedRows}
+            show-row-number-column>
+            table-height="200">
+        </c-doj_compliant_-case_-list-view>
+       <!-- </lightning-card>-->
+
+    
+
+    <!--</template>-->
+    <template if:true={showQuestions}>
+    <c-doj_-int_-questionnarie onsenddata={handleDataEvent}></c-doj_-int_-questionnarie>
+    </template>
+ </lightning-card>
+   </div>    
+    </div>
+  </div>      
+</template>
