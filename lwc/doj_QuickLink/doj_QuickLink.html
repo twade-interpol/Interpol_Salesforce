@@ -1,0 +1,23 @@
+<template>
+<lightning-card>
+<div style="margin-bottom: 20px;margin-left: 10px">
+<h1><b>Quick Links</b></h1> 
+</div>
+<template if:true={customMetadataList}>
+    <div style="margin-left: 10px">
+        <ul>
+            <template for:each={customMetadataList} for:item="metadata">
+                <li key={metadata.id}>
+                     <lightning-icon icon-name="utility:jump_to_right" size="small"></lightning-icon>
+                    <!--<a href={metadata.link} target="_blank">{metadata.label}</a>-->
+                     <lightning-formatted-url value={metadata.link} label={metadata.label} target="_blank"></lightning-formatted-url>
+                </li>
+            </template>
+        </ul>
+    </div>
+    </template>
+    <template if:true={error}>
+        <p>Error loading custom metadata.</p>
+    </template>
+</lightning-card>
+</template>
