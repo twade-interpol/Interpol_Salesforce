@@ -12,8 +12,9 @@ public class doj_RelatedSubjectController {
     }
     
      @AuraEnabled
-    public static String linkSubject(List<String> subjectIds, Id parentId) {
-       system.debug('subjectIds>>'+subjectIds);
+    public static List<String> linkSubject(List<String> subjectIds, Id parentId) {
+        List<String> messageList = new List<String>();
+        system.debug('subjectIds>>'+subjectIds);
         system.debug('parentId>>'+parentId);
         Schema.SObjectType complaintCaseObject = Schema.ComplaintCase.getSObjectType();
         Schema.SObjectType caseObject = Schema.Case.getSObjectType();
@@ -32,6 +33,8 @@ public class doj_RelatedSubjectController {
             }
             insert caseSubjectList;
             message='The selected subject(s) are linked to the Interpol Case';
+            messageList.add(message);
+            messageList.add(parentId);
         }else if(record==caseObject){
             List<Inquiry_Subject__c> inquirySubjectList = new List<Inquiry_Subject__c>();
             for(String str:subjectIds)
@@ -43,8 +46,10 @@ public class doj_RelatedSubjectController {
             }
             insert inquirySubjectList;
             message='The selected subject(s) are linked to the Interpol Inquiry';
+            messageList.add(message);
+            messageList.add(parentId);
         }
-      return message;
+      return messageList;
     }
     
      @AuraEnabled(cacheable=true)
