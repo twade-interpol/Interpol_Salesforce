@@ -50,7 +50,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <owner>mmagesh@inteprosfed.com</owner>
+    <owner>release.manager@usdoj.gov</owner>
     <runningUser>mmagesh@inteprosfed.com</runningUser>
     <textColor>#000000</textColor>
     <title>Case Inquiry Dashboard</title>
