@@ -1,0 +1,154 @@
+<template>
+
+
+        <lightning-card   title="Date Of Birth" icon-name="standard:account">
+    
+            <div class="acc-container">
+    
+         <lightning-record-edit-form record-id={recordId} object-api-name={objectApiName} onsuccess={handleSuccess}>
+            <lightning-messages></lightning-messages>
+        <lightning-accordion allow-multiple-sections-open
+                             onsectiontoggle={handleSectionToggle}
+                             active-section-name={activeSections} >   
+            <lightning-accordion-section name="A" label="Date Of Birth">
+
+
+        
+   <div class=" slds-grid">
+<div class="slds-col slds-p-horizontal_medium slds-size_6-of-12">
+            <template for:each={lfieldList} for:item="field">
+            
+                <div key={field} class=" slds-grid label-inline" if:false={showEditField}>
+                      <div class="slds-col slds-size_11-of-12 slds-form-element slds-form-element_horizontal" style=" padding-bottom: 2.25%">
+                        
+                        <lightning-output-field field-name={field}>
+                        </lightning-output-field>
+                           <hr style="margin-block:0rem">
+
+                    </div>
+                   
+                    <div class="slds-col slds-size_1-of-12">
+                        <lightning-button-icon variant="bare" icon-name="utility:edit" onclick={handleEdit}>
+                        </lightning-button-icon>
+                    </div>
+                 
+                    </div>
+
+
+                <div key={field} class="slds-grid" if:true={showEditField}>
+                    <div class="slds-col slds-size_12-of-12">
+                        <lightning-input-field field-name={field}>
+                        </lightning-input-field>
+                    </div>
+          
+                </div>
+
+             
+   
+                    
+            </template>
+            </div>
+ 
+<div class="slds-col slds-p-horizontal_medium slds-size_6-of-12">
+            <template for:each={rfieldList} for:item="field">
+            
+                <div key={field} class=" slds-grid label-inline" if:false={showEditField}>
+                      <div class="slds-col slds-size_11-of-12 slds-form-element slds-form-element_horizontal" style=" padding-bottom: 2.25%">
+                        
+                        <lightning-output-field field-name={field}>
+                        </lightning-output-field>
+                           <hr style="margin-block:0rem">
+
+                    </div>
+                   
+                    <div class="slds-col slds-size_1-of-12">
+                        <lightning-button-icon variant="bare" icon-name="utility:edit" onclick={handleEdit}>
+                        </lightning-button-icon>
+                    </div>
+                 
+                    </div>
+
+
+                <div key={field} class="slds-grid" if:true={showEditField}>
+                    <div class="slds-col slds-size_12-of-12">
+                        <lightning-input-field field-name={field}>
+                        </lightning-input-field>
+                    </div>
+         
+                </div>
+
+             
+   
+                    
+            </template>
+</div>
+   </div>
+            <lightning-button type="submit" name="submit" label="Save" if:true={showbuttons}>
+                
+            </lightning-button>
+              <lightning-button type="Cancel" name="Cancel" label="Cancel" if:true={showbuttons} onclick={handlecancel}>>
+                
+            </lightning-button>
+            
+     
+
+    </lightning-accordion-section>
+
+    <lightning-accordion-section name="B" label="System Information">
+
+   <div class=" slds-grid">
+<div class="slds-col slds-p-horizontal_medium slds-size_6-of-12">
+
+
+       <template for:each={SfieldList} for:item="field">
+     
+                <div key={field} class="slds-grid slds-size_11-of-12 label-inline" if:false={showEditField}>
+                      <div class="slds-form-element slds-form-element_horizontal" style=" padding-bottom: 2.25%">
+                        
+                        <lightning-output-field field-name={field}>
+                        </lightning-output-field>
+                           <hr style="margin-block:0rem">
+
+                    </div>
+                </div>
+        </template>
+
+
+
+</div>
+
+<div class="slds-col slds-p-horizontal_medium slds-size_6-of-12">
+
+
+       <template for:each={SrfieldList} for:item="field">
+     
+                <div key={field} class="slds-grid slds-size_11-of-12 label-inline" if:false={showEditField}>
+                      <div class="slds-form-element slds-form-element_horizontal" style=" padding-bottom: 2.25%">
+                        
+                        <lightning-output-field field-name={field}>
+                        </lightning-output-field>
+                           <hr style="margin-block:0rem">
+
+                    </div>
+                </div>
+        </template>
+
+
+
+</div>
+
+
+   </div>
+
+
+
+    </lightning-accordion-section>
+
+    
+
+</lightning-accordion>
+
+   </lightning-record-edit-form>
+    </div>
+</lightning-card>
+    </template>
