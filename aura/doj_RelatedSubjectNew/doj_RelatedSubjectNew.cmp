@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes,lightning:actionOverride,lightning:isUrlAddressable">
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+	<aura:attribute name="parentRecordId" type="String" />
+    <aura:attribute name="pageReference" type="Object"/>
+    <c:doj_RelatedSubject aura:id="myLwc" recordId="{!v.parentRecordId}"/>
+    <!--<lightning:formattedText value="{! v.parentRecordId }"/>-->
+</aura:component>
