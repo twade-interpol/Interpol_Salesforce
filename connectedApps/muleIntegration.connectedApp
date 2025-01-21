@@ -53,6 +53,7 @@
         <refreshTokenPolicy>infinite</refreshTokenPolicy>
     </oauthPolicy>
     <profileName>System Administrator</profileName>
+    <profileName>CopadoSystemAdmin</profileName>
     <sessionPolicy>
         <sessionTimeout>60</sessionTimeout>
     </sessionPolicy>

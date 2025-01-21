@@ -10,7 +10,7 @@ const columns = [
     { label: 'Email', fieldName: 'Email', type: 'Email' },
     { label: 'Phone', fieldName: 'Phone', type: 'phone' },
 ];
-export default class Doj_RelatedSubject extends LightningElement {
+export default class Doj_RelatedSubject extends NavigationMixin(LightningElement) {
  
   @track searchTerm = '';
     @track contacts;
@@ -121,7 +121,7 @@ export default class Doj_RelatedSubject extends LightningElement {
                 console.log('Apex call result:', result[0]);
                 console.log('Apex call result1>>:', result[1]);
                 this.objectId=result[1];
-                this.navigateToRecord();
+                this.navigateToRecord(result[0]);
                  this.showToast(result[0]);
                 // Additional success handling, like showing a success message
             })
@@ -144,23 +144,36 @@ export default class Doj_RelatedSubject extends LightningElement {
         });
      }*/
      
-     navigateToRecord() {
-        if (!this.recordId) return;
+     navigateToRecord(msg) {
+       if (!this.recordId) return;
 
-        // Build the URL dynamically
+       /* // Build the URL dynamically
         const baseUrl = window.location.origin;
         const recordUrl = `${baseUrl}/${this.objectId}`;
 
         // Redirect to the record page
         setTimeout(() => {
         window.location.assign(recordUrl);
-         }, 3000);
+         }, 3000);*/
+        if(msg==='The selected subject(s) are linked to the Interpol Case')
+        {
+            const baseUrl = window.location.origin; // Get the base URL dynamically
+            window.top.location.href = `${baseUrl}/lightning/r/ComplaintCase/${this.recordId}/related/Related_Subjects__r/view`;
+        }else{
+            const baseUrl = window.location.origin; // Get the base URL dynamically
+            window.top.location.href = `${baseUrl}/lightning/r/Case/${this.recordId}/related/Inquiry_Subjects__r/view`;
+
+        }
+
     }
     handleCancel()
     {
-       const baseUrl = window.location.origin;
+       /*const baseUrl = window.location.origin;
        const recordUrl = `${baseUrl}/${this.objectId}`;
-       window.location.assign(recordUrl);
+       window.location.assign(recordUrl);*/
+
+       return (this.sfdcBaseURL = window.location.origin + '/' + this.objectId);
+
     }
 
     showToast(message) {

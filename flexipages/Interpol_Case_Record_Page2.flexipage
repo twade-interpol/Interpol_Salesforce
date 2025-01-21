@@ -15,9 +15,6 @@
                         <valueListItems>
                             <value>FeedItem.TextPost</value>
                         </valueListItems>
-                        <valueListItems>
-                            <value>ComplaintCase.Change_Owner</value>
-                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -85,12 +82,6 @@
                 </componentInstanceProperties>
                 <componentName>force:relatedListContainer</componentName>
                 <identifier>force_relatedListContainer2</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>doj_FileView</componentName>
-                <identifier>c_doj_FileView</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-bbf60620-49de-439f-973a-677ecc76d6ec</name>
