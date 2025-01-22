@@ -1,0 +1,13 @@
+/* Add margin between each question */
+.question-item {
+    margin-top: 5rem; /* Adjust the margin as needed */
+}
+
+.border-box-item {
+    border: 1px solid #d8dde6;   /* Light gray border */
+    border-radius: 4px;          /* Optional: Rounded corners */
+    padding: 10px;               /* Inner padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    box-sizing: border-box;      /* Apply border-box to include padding and border in width/height */
+    width: 100%;                 /* Ensure the div takes full width of the layout item */
+}
