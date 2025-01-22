@@ -17,15 +17,11 @@
     <navType>Console</navType>
     <tabs>New_Interpol_CMS_Home</tabs>
     <tabs>INTERPOL_Cases</tabs>
-    <tabs>INTERPOL_Inquiries</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Interpol_CMS_App_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
             <tab>INTERPOL_Cases</tab>
-        </mappings>
-        <mappings>
-            <tab>INTERPOL_Inquiries</tab>
         </mappings>
         <mappings>
             <tab>New_Interpol_CMS_Home</tab>
