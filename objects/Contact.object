@@ -268,11 +268,14 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -326,10 +329,21 @@
     <enableEnhancedLookup>true</enableEnhancedLookup>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <externalSharingModel>Read</externalSharingModel>
     <fields>
         <fullName>AccountId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Aliases__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Aliases</label>
+        <referenceTo>Alias__c</referenceTo>
+        <relationshipLabel>Related Aliases</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -345,8 +359,37 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Businesses__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Businesses</label>
+        <referenceTo>Businesses__c</referenceTo>
+        <relationshipLabel>Related Businesses</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ContactSource</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <label>Country</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DOBs__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>DOBs</label>
+        <referenceTo>DOB__c</referenceTo>
+        <relationshipLabel>Related DOBs</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Department</fullName>
@@ -363,6 +406,30 @@
     <fields>
         <fullName>Email</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>FatherFirstName__c</fullName>
+        <label>FatherFirstName</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>FatherLastName__c</fullName>
+        <label>FatherLastName</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Fathers_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Father&apos;s Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Fax</fullName>
@@ -409,8 +476,51 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>MotherFirstName__c</fullName>
+        <label>MotherFirstName</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MotherLastName__c</fullName>
+        <label>MotherLastName</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Mother_s_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Mother&apos;s Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Name</fullName>
         <trackFeedHistory>true</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>NameAtBirth__c</fullName>
+        <label>NameAtBirth</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Offenses__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Offenses</label>
+        <referenceTo>Offence__c</referenceTo>
+        <relationshipLabel>Related Offenses</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>OtherAddress</fullName>
@@ -430,14 +540,202 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>PlaceOfBirth__c</fullName>
+        <label>PlaceOfBirth</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>Pronouns</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Properties__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Property</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipLabel>Related Properties</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PropertyIdentification__c</fullName>
+        <label>PropertyIdentification</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Related_Properties__c</fullName>
+        <label>Related Properties</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Related_Property__c</fullName>
+        <label>Related Property</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>ReportsToId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <label>Role</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Agency</fullName>
+                    <default>false</default>
+                    <label>Agency</label>
+                </value>
+                <value>
+                    <fullName>Associate</fullName>
+                    <default>false</default>
+                    <label>Associate</label>
+                </value>
+                <value>
+                    <fullName>Company</fullName>
+                    <default>false</default>
+                    <label>Company</label>
+                </value>
+                <value>
+                    <fullName>Criminal Organization</fullName>
+                    <default>false</default>
+                    <label>Criminal Organization</label>
+                </value>
+                <value>
+                    <fullName>Criminal Subject/Offender</fullName>
+                    <default>false</default>
+                    <label>Criminal Subject/Offender</label>
+                </value>
+                <value>
+                    <fullName>Gang Member</fullName>
+                    <default>false</default>
+                    <label>Gang Member</label>
+                </value>
+                <value>
+                    <fullName>Informant</fullName>
+                    <default>false</default>
+                    <label>Informant</label>
+                </value>
+                <value>
+                    <fullName>Institution</fullName>
+                    <default>false</default>
+                    <label>Institution</label>
+                </value>
+                <value>
+                    <fullName>Non-Criminal Organization</fullName>
+                    <default>false</default>
+                    <label>Non-Criminal Organization</label>
+                </value>
+                <value>
+                    <fullName>Non-Criminal Subject</fullName>
+                    <default>false</default>
+                    <label>Non-Criminal Subject</label>
+                </value>
+                <value>
+                    <fullName>Officer</fullName>
+                    <default>false</default>
+                    <label>Officer</label>
+                </value>
+                <value>
+                    <fullName>Owner/Owned</fullName>
+                    <default>false</default>
+                    <label>Owner/Owned</label>
+                </value>
+                <value>
+                    <fullName>Religious Organization</fullName>
+                    <default>false</default>
+                    <label>Religious Organization</label>
+                </value>
+                <value>
+                    <fullName>Sexual Offender</fullName>
+                    <default>false</default>
+                    <label>Sexual Offender</label>
+                </value>
+                <value>
+                    <fullName>Sexual Predator</fullName>
+                    <default>false</default>
+                    <label>Sexual Predator</label>
+                </value>
+                <value>
+                    <fullName>Unknown Organization Role</fullName>
+                    <default>false</default>
+                    <label>Unknown Organization Role</label>
+                </value>
+                <value>
+                    <fullName>Unknown Person Role</fullName>
+                    <default>false</default>
+                    <label>Unknown Person Role</label>
+                </value>
+                <value>
+                    <fullName>Victim</fullName>
+                    <default>false</default>
+                    <label>Victim</label>
+                </value>
+                <value>
+                    <fullName>Witness</fullName>
+                    <default>false</default>
+                    <label>Witness</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sex__c</fullName>
+        <label>Sex</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Male</fullName>
+                    <default>false</default>
+                    <label>Male</label>
+                </value>
+                <value>
+                    <fullName>Female</fullName>
+                    <default>false</default>
+                    <label>Female</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>Title</fullName>
@@ -485,7 +783,7 @@
         <searchResultsAdditionalFields>CONTACT.EMAIL</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>Read</sharingModel>
     <webLinks>
         <fullName>GoogleMaps</fullName>
         <availability>online</availability>

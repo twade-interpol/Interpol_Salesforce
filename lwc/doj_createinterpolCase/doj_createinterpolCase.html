@@ -1,0 +1,36 @@
+<template>
+    <div class="slds-brand-band_narrow_view_two" style={dynamicStyle}>
+        <div class="slds-modal__header">
+            <h2 class="slds-modal__title slds-hyphenate slds-text-heading--medium"> New INTERPOL Case</h2>
+
+        </div>
+        <!--
+        <div class="slds-clearfix detail-panel-root footer-visible" >
+         <div class="form-legend-desktop" style="background:white">
+             <abbr class="slds-required"> </abbr>
+         </div>
+        <h3 class="test-id__section-header-container slds-section__title slds-theme--shade">
+            <span class="test-id__section-header-title section-header-title slds-p-horizontal--small">INTERPOL Case</span>
+        </h3>
+        </div>
+        -->
+    <lightning-quick-action-panel title="Quick Action Title">
+        <lightning-spinner alternative-text="Loading" size="small" if:true={isSpinner} ></lightning-spinner>
+
+  <lightning-card style={cardstyle} >
+        <lightning-record-form 
+        object-api-name={objectApiName}
+        fields={fulllist}
+        onsuccess={handleSuccess}
+        columns="2" 
+        mode="edit"
+        onsubmit={onSubmitHandler}
+        oncancel={customHideModalPopup}
+        >
+        </lightning-record-form>
+    </lightning-card>
+
+    </lightning-quick-action-panel>
+    
+    </div>
+</template>
