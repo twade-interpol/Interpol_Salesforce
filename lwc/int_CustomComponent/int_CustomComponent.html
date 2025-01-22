@@ -1,0 +1,128 @@
+<template>
+    <lightning-card title="Contact Information" icon-name="standard:contact">
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="First Name" value={firstName} onchange={handleInputChange}
+                        data-id="firstName" required>
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Last Name" value={lastName} onchange={handleInputChange} data-id="lastName"
+                        required>
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox
+                        label="Sex"
+                        value={accountId}
+                        options={Soptions}
+                        onchange={handleInputChange}
+                        data-id="accountId">
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Birth Date" type="date" value={Birthdate} onchange={handleInputChange}
+                        data-id="Birthdate">
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Name at Birth" type="text" value={NameAtBirth} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                </div>
+                 <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Father First Name" type="text" value={FatherFirstName} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                </div>
+                 <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Father Last Name" type="text" value={FatherLastName} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                </div>
+                  <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Mother First Name" type="text" value={MotherFirstName} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                </div>
+                 <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Mother Last Name" type="text" value={MotherLastName} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                </div>
+                 <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Status" type="text" value={Status} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                </div>
+                 <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Country" type="text" value={Country} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                </div>
+                
+                </div>
+                
+                <div class="slds-section__title custom-section-header additional-header">
+                    <h3 class="slds-text-title_caps slds-theme_shade">Complaint Information</h3>
+                </div>
+                <div class="slds-grid slds-wrap slds-gutters">
+              
+                    <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Enitity Id" type="text" value={EntityID} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                    </div> 
+                    <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Reference" type="text" value={Reference} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                    </div> 
+                     <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Office" type="text" value={Office} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                    </div> 
+                     <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Type Of NOtification" type="text" value={TypeOfNotification} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                    </div> 
+                      <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Control NR" type="text" value={ControlNR} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                    </div>
+                </div>
+                 <div class="slds-section__title custom-section-header additional-header">
+                    <h3 class="slds-text-title_caps slds-theme_shade">Property Information</h3>
+                </div>
+                <div class="slds-grid slds-wrap slds-gutters">
+              
+                    <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Document Nr" type="text" value={DocumentNr} onchange={handleInputChange}
+                        data-id="Birthdate"></lightning-input>
+                    </div> 
+                     <lightning-combobox
+                        label="Type Of Document"
+                        value={typeofDoc}
+                        options={typeOfDocoptions}
+                        onchange={handleInputChange}
+                        data-id="typeofDocId">
+                    </lightning-combobox>
+                     <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Country" type="text" value={Country} onchange={handleInputChange}
+                        data-id="Country"></lightning-input>
+                    </div>
+                      <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Date of Issue" type="Date" value={DateOfIssue} onchange={handleInputChange}
+                        data-id="Country"></lightning-input>
+                    </div>  
+                </div>
+                </div>
+                 <div class="slds-section__title custom-section-header additional-header">
+                    <h3 class="slds-text-title_caps slds-theme_shade">Offence Information</h3>
+                </div>
+                <div class="slds-grid slds-wrap slds-gutters">
+              
+                    <div class="slds-col slds-size_1-of-2">
+                     <lightning-input label="Offence" type="text" value={Offence} onchange={handleInputChange}
+                        data-id="Offence"></lightning-input>
+                    </div> 
+                </div>
+            <div class="slds-m-top_medium">
+                <lightning-button label="Save" onclick={handleSave} class="slds-m-top_medium" variant="brand">
+                </lightning-button>
+            </div>
+        
+    </lightning-card>
+</template>
