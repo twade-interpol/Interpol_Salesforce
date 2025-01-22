@@ -165,7 +165,6 @@
         </connector>
         <inputReference>JunctionObj</inputReference>
     </recordCreates>
-    <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <name>Copy_2_of_Associate_Inquiry_to_INTERPOL_Case</name>
         <label>Copy 2 of Associate Inquiry to INTERPOL Case</label>
@@ -350,7 +349,7 @@
             <targetReference>CheckOBJ</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>JunctionObj</name>
         <dataType>SObject</dataType>
