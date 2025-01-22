@@ -1,0 +1,32 @@
+/* Custom styles for different section headers */
+
+/* Contact Information Header */
+.contact-header {
+    background-color: #e3f7fc; /* Light blue background */
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #b8e1f7; /* Border for separation */
+    border-radius: 0.25rem 0.25rem 0 0; /* Rounded corners on top */
+}
+
+/* Account Information Header */
+.account-header {
+    background-color: #f9ecec; /* Light red background */
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #f5c2c2; /* Border for separation */
+    border-radius: 0.25rem 0.25rem 0 0; /* Rounded corners on top */
+}
+
+/* Additional Information Header */
+.additional-header {
+    background-color: #eef6e6; /* Light green background */
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #d6e9cd; /* Border for separation */
+    border-radius: 0.25rem 0.25rem 0 0; /* Rounded corners on top */
+}
+
+/* Common header text styles */
+.custom-section-header h3 {
+    margin: 0;
+    color: #16325c; /* Text color */
+    font-weight: bold;
+}
