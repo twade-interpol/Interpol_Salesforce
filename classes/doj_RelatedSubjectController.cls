@@ -26,6 +26,7 @@ public class doj_RelatedSubjectController {
             List<Case_Subject__c> caseSubjectList = new List<Case_Subject__c>();
             for(String str:subjectIds)
             {
+                system.debug('str>>'+str);
                 Case_Subject__c caseSub= new Case_Subject__c();
                 caseSub.INTERPOL_Case__c=parentId;
                 caseSub.Subject__c=str;
