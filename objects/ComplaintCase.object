@@ -114,11 +114,14 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Interpol_Case_Record_Page2</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -126,29 +129,386 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <enableFeeds>false</enableFeeds>
+    <compactLayoutAssignment>Interpol_Case</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Interpol_Case</fullName>
+        <fields>Name</fields>
+        <label>INTERPOL Case</label>
+    </compactLayouts>
+    <enableFeeds>true</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Aliases__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Aliases</label>
+        <referenceTo>Alias__c</referenceTo>
+        <relationshipLabel>Related Aliases</relationshipLabel>
+        <relationshipName>Complaint_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Businesses__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Businesses</label>
+        <referenceTo>Businesses__c</referenceTo>
+        <relationshipLabel>Related Businesses</relationshipLabel>
+        <relationshipName>Complaint_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>CaseId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Control_Nr__c</fullName>
+        <label>Control_Nr</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DOBs__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>DOB</label>
+        <referenceTo>DOB__c</referenceTo>
+        <relationshipLabel>Related DOBs</relationshipLabel>
+        <relationshipName>Complaint_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ENTITY_ID__c</fullName>
+        <label>ENTITY_ID</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>FileNumber__c</fullName>
+        <label>FileNumber</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Interpol_Cases__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Subject</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Interpol Cases</relationshipLabel>
+        <relationshipName>Interpol_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Interpol_Name__c</fullName>
+        <label>INTERPOL Name</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Offenses__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Offenses</label>
+        <referenceTo>Offence__c</referenceTo>
+        <relationshipLabel>RelatedOffenses</relationshipLabel>
+        <relationshipName>Complaint_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Office__c</fullName>
+        <label>Office</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Properties__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Properties</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipLabel>Related Properties</relationshipLabel>
+        <relationshipName>Complaint_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>PublicComplaintId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>Queries__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Queries</label>
+        <referenceTo>Query__c</referenceTo>
+        <relationshipLabel>Queries</relationshipLabel>
+        <relationshipName>Queries</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>QueueID__c</fullName>
+        <label>QueueID</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Reference__c</fullName>
+        <label>Reference</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Review_Date__c</fullName>
+        <label>Review Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Saved_Search_Results__c</fullName>
+        <label>Saved Search Results</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status_Id__c</fullName>
+        <label>Status Id</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Pending Response</fullName>
+                    <default>false</default>
+                    <label>Pending Response</label>
+                </value>
+                <value>
+                    <fullName>Due for Review</fullName>
+                    <default>false</default>
+                    <label>Due for Review</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type_Of_Notification__c</fullName>
+        <label>Type Of Notification</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
     <listViews>
         <fullName>All_ComplaintCase</fullName>
+        <columns>Name</columns>
+        <columns>Status__c</columns>
+        <columns>Owner</columns>
+        <columns>Offenses__c</columns>
+        <columns>LastModifiedDate</columns>
+        <columns>LastModifiedBy</columns>
+        <columns>Comments__c</columns>
+        <columns>CreatedDate</columns>
+        <columns>CreatedBy</columns>
         <filterScope>Everything</filterScope>
-        <label>All Complaint Cases</label>
+        <label>All Open INTERPOL Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>Counterterrorism_CTD_ComplaintCase</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Counterterrorism (CTD)</label>
+        <queue>Counterterrorism_CTD</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Cyber_Crime_Unit_TCD_ComplaintCase</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Cyber Crime Unit (TCD)</label>
+        <queue>Cyber_Crime_Unit_TCD</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Emerging_Crime_Unit_TCD_ComplaintCase</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Emerging Crime Unit (TCD)</label>
+        <queue>Emerging_Crime_Unit_TCD</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Front_Office_ComplaintCase</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Front Office</label>
+        <queue>Front_Office</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>General_Counsel_ComplaintCase</fullName>
+        <filterScope>Queue</filterScope>
+        <label>General Counsel</label>
+        <queue>General_Counsel</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Global_Police_Services_GPS_ComplaintCase</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Global Police Services (GPS)</label>
+        <queue>Global_Police_Services_GPS</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>My_Divisions_Open_Cases</fullName>
+        <columns>Name</columns>
+        <columns>Status__c</columns>
+        <columns>Owner</columns>
+        <columns>QueueID__c</columns>
+        <columns>Offenses__c</columns>
+        <columns>ENTITY_ID__c</columns>
+        <columns>LastModifiedDate</columns>
+        <columns>LastModifiedBy</columns>
+        <columns>CreatedDate</columns>
+        <columns>CreatedBy</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Interpol_Cases__c</field>
+            <operation>equals</operation>
+            <value>owner id</value>
+        </filters>
+        <filters>
+            <field>Interpol_Cases__c</field>
+            <operation>equals</operation>
+            <value>division owners</value>
+        </filters>
+        <label>My Divisions Open Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Open_Cases</fullName>
+        <columns>Name</columns>
+        <columns>Status__c</columns>
+        <columns>Owner</columns>
+        <columns>QueueID__c</columns>
+        <columns>Offenses__c</columns>
+        <columns>ENTITY_ID__c</columns>
+        <columns>LastModifiedDate</columns>
+        <columns>LastModifiedBy</columns>
+        <columns>CreatedDate</columns>
+        <columns>CreatedBy</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>My Open Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>Organized_Crime_Unit_TCD_ComplaintCase</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Organized Crime Unit (TCD)</label>
+        <queue>Organized_Crime_Unit_TCD</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <listViewButtons>New_INTERPOL_Case</listViewButtons>
         <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>New_INTERPOL_Case</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New INTERPOL Case</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/lightning/cmp/c:doj_newInterpolcase</url>
+    </webLinks>
 </CustomObject>
