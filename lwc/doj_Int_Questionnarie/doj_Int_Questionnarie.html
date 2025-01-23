@@ -1,0 +1,199 @@
+<template>
+   
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"><b>Case Closing Review Sheet</b></h2>
+          </header>
+      
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+              <lightning-card>
+        <div class="slds-p-horizontal_small">
+            <!-- Question 1 -->
+            <lightning-layout-item  >
+                <div class="border-box-item">
+                <p>1. Does the incoming request meet all necessary criteria?</p>
+                <lightning-radio-group
+                    options={yesNoOptions}
+                    value={requestCriteria}
+                    onchange={handleRadioChange}
+                    data-id="requestCriteria">
+                </lightning-radio-group>
+                <template if:true={showRequestCriteriaJustification}>
+                    <lightning-textarea
+                        label="Please provide justification"
+                        value={requestCriteriaJustification}
+                        onchange={handleTextChange}
+                        data-id="requestCriteriaJustification">
+                    </lightning-textarea>
+                </template>
+                </div>
+            </lightning-layout-item><br/>
+
+            <!-- Question 2 -->
+            <lightning-layout-item>
+                <div class="border-box-item">
+                <p>2. Is this a U.S. Case? If yes, was the notice/diffusion cancelled properly?</p>
+                <lightning-radio-group
+                    options={yesNoOptions}
+                    value={usCase}
+                    onchange={handleRadioChange}
+                    data-id="usCase">
+                </lightning-radio-group>
+                <template if:true={showUsCaseJustification}>
+                    <lightning-textarea
+                        label="Please provide justification"
+                        value={usCaseJustification}
+                        onchange={handleTextChange}
+                        data-id="usCaseJustification">
+                    </lightning-textarea>
+                </template>
+                </div>
+            </lightning-layout-item><br/>
+
+            <!-- Question 3 -->
+            <lightning-layout-item>
+                <div class="border-box-item">
+                <p>3. Were appropriate queries conducted and recorded correctly in the file?</p>
+                <lightning-radio-group
+                    options={yesNoOptions}
+                    value={queriesConducted}
+                    onchange={handleRadioChange}
+                    data-id="queriesConducted">
+                </lightning-radio-group>
+                <template if:true={showQueriesConductedJustification}>
+                    <lightning-textarea
+                        label="Please provide justification"
+                        value={queriesConductedJustification}
+                        onchange={handleTextChange}
+                        data-id="queriesConductedJustification">
+                    </lightning-textarea>
+                </template>
+                </div>
+            </lightning-layout-item><br/>
+
+            <!-- Question 4 -->
+            <lightning-layout-item>
+                <div class="border-box-item">
+                <p>4. Were all the leads followed?</p>
+                <lightning-radio-group
+                    options={yesNoOptions}
+                    value={leadsFollowed}
+                    onchange={handleRadioChange}
+                    data-id="leadsFollowed">
+                </lightning-radio-group>
+                <template if:true={showLeadsFollowedJustification}>
+                    <lightning-textarea
+                        label="Please provide justification"
+                        value={leadsFollowedJustification}
+                        onchange={handleTextChange}
+                        data-id="leadsFollowedJustification">
+                    </lightning-textarea>
+                </template>
+                </div>
+            </lightning-layout-item><br/>
+
+            <!-- Question 5 -->
+            <lightning-layout-item>
+                <div class="border-box-item">
+                <p>5. Was the request honored?</p>
+                <lightning-radio-group
+                    options={yesNoOptions}
+                    value={requestHonored}
+                    onchange={handleRadioChange}
+                    data-id="requestHonored">
+                </lightning-radio-group>
+                <template if:true={showRequestHonoredJustification}>
+                    <lightning-textarea
+                        label="Please provide justification"
+                        value={requestHonoredJustification}
+                        onchange={handleTextChange}
+                        data-id="requestHonoredJustification">
+                    </lightning-textarea>
+                </template>
+                </div>
+            </lightning-layout-item><br/>
+
+            <!-- Question 6 -->
+            <lightning-layout-item>
+                <div class="border-box-item">
+                <p>6. Is all appropriate information indexed in the case?</p>
+                <lightning-radio-group
+                    options={yesNoOptions}
+                    value={infoIndexed}
+                    onchange={handleRadioChange}
+                    data-id="infoIndexed">
+                </lightning-radio-group>
+                </div>
+            </lightning-layout-item><br/>
+             <!-- Question 7 -->
+            <lightning-layout-item>
+                <div class="border-box-item">
+                <p>7.For foreign cases:</p>
+<p>a. Was the TECS entry cancelled? A search of TECS by name and TECS ID should be completed to ensure all entries are captured.</p>
+                <lightning-radio-group
+                    options={yesNoNAOptions}
+                    value={infoIndexed}
+                    onchange={handleRadioChange}
+                    data-id="infoIndexed">
+                </lightning-radio-group><br/>
+                  <p>b. Was the NCIC entry cancelled?</p>
+                <lightning-radio-group
+                    options={yesNoNAOptions}
+                    value={infoIndexed}
+                    onchange={handleRadioChange}
+                    data-id="infoIndexed">
+                </lightning-radio-group>
+                </div>
+            </lightning-layout-item><br/>
+            <!-- Question 8 -->
+            <lightning-layout-item>
+                <div class="border-box-item">
+<p>8.Was a search of III conducted to determine whether or not fingerprints are on file?</p>
+                <lightning-radio-group
+                    options={yesNoOptions}
+                    value={infoIndexed}
+                    onchange={handleRadioChange}
+                    data-id="infoIndexed">
+                </lightning-radio-group><br/>
+                  <p>Was a cancellation sent/received by DHS?</p>
+                <lightning-radio-group
+                    options={yesNoNAOptions}
+                    value={infoIndexed}
+                    onchange={handleRadioChange}
+                    data-id="infoIndexed">
+                </lightning-radio-group><br/>
+                <p>Was a cancellation sent/received by OBIM?</p>
+                <lightning-radio-group
+                    options={yesNoNAOptions}
+                    value={infoIndexed}
+                    onchange={handleRadioChange}
+                    data-id="infoIndexed">
+                </lightning-radio-group>
+                </div>
+            </lightning-layout-item>
+        </div>
+    </lightning-card>
+          </div>
+
+          <!-- modal footer start-->
+          <footer class="slds-modal__footer">
+             <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Cancel</button>
+          </footer>
+       
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+
+ <!-- modal end -->
+
+</template>
