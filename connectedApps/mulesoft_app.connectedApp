@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>raghavendra.r.vanavasam@usdoj.gov</contactEmail>
+    <label>mulesoft app</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:8081/callback</callbackUrl>
+        <certificate>MIIEcjCCA1qgAwIBAgIOAZBa5sUbAAAAABFcz8owDQYJKoZIhvcNAQELBQAwfjEWMBQGA1UEAwwNbXVsZXNvZnRfY2VydDEYMBYGA1UECwwPMDBEQlowMDAwMDA4alBjMRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTAeFw0yNDA2MjcxODEzMTFaFw0yNTA2MjcxMjAwMDBaMH4xFjAUBgNVBAMMDW11bGVzb2Z0X2NlcnQxGDAWBgNVBAsMDzAwREJaMDAwMDAwOGpQYzEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDKXkP+hEtrem8HEFkGz9YHFptOEK1jPeA54Ilwtuk23I07aONgmRZJcFCNIaiZTPcYBExB02D3pMDGhazOeUa5lGC4yGUrd/8rEgqtw/OFQZqn6o9efXsanPu16zWp9SIMi5z35V4je03lUgDND99+9kSuA6R7v5plwriUD5bXRCgV00PXYxRKmz2oRHZfwV9WgucJHYejdssezoXp3agehaPKHsukpH4IXbmOZfrTsjqoobklLRwBzpKO+z9vGS3torCXmPSdWeYwC9QEad9759ebt8rXDdMzK7oO0jb7LpigdP3wNA6kutU/05tt8O6VXGo7UaClZZ/CLW6YFbATAgMBAAGjge0wgeowHQYDVR0OBBYEFCJ3JatOnyKYmfQEcVIeK4an/PL8MA8GA1UdEwEB/wQFMAMBAf8wgbcGA1UdIwSBrzCBrIAUInclq06fIpiZ9ARxUh4rhqf88vyhgYOkgYAwfjEWMBQGA1UEAwwNbXVsZXNvZnRfY2VydDEYMBYGA1UECwwPMDBEQlowMDAwMDA4alBjMRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQYIOAZBa5sUbAAAAABFcz8owDQYJKoZIhvcNAQELBQADggEBAF+rLiQZLbo2ozNe0uV90Bw5PeEgbV7GkAXovaiMFPDVt44CoOeimKaQNA7eDZ8Rwi+8GM38uzDF9QFtVvwxrodC1rcIjWYGdC2TJVvrHMei8wLgm2bDSNeS1kTGgZtgxiuRN0+PWo4W0rVcRM4QmIDypnWBbJcffDVoEi79vECNXpMEyaWZUm1b1So5gnvH77axXoZTp3eilDKyK7oDHo6iMimkON3MXZeyuvMPLOecb3ErAY65XA3xIcH/PNPOJxitzU9fyOo2T3cMsukdGPCrAzTUy/mWl1sKNCoGUBPZ996tKiczKUxuyNpAeASboon8ah+ELtI/xTuopvKibsk=</certificate>
+        <consumerKey>3MVG91w9zi214CtVFNOygVFeho3PgYIwoc7Y8ZTBLT7AKWzsOy_d6s8sZaXLZqxlx6NWFySj8Uf40dDpfCdt6</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>true</isPkceRequired>
+        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
+        <refreshTokenPolicy>zero</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

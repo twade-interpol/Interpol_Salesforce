@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>exkhpvx7gwjSoNoST0j6</issuer>
+    <loginUrl>https://dojlogin-test.usdoj.gov/app/salesforce/exkhpvx7gwjSoNoST0j6/sso/saml</loginUrl>
+    <logoutUrl>https://dojlogin-test.usdoj.gov</logoutUrl>
+    <name>DOJ Login QA</name>
+    <oauthTokenEndpoint>https://usncb--qa.sandbox.my.salesforce.com/services/oauth2/token</oauthTokenEndpoint>
+    <redirectBinding>false</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P1BZ00000002iy</requestSigningCertId>
+    <salesforceLoginUrl>https://usncb--qa.sandbox.my.salesforce.com</salesforceLoginUrl>
+    <samlEntityId>https://usncb--qa.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <useConfigRequestMethod>true</useConfigRequestMethod>
+    <useSameDigestAlgoForSigning>true</useSameDigestAlgoForSigning>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIDsDCCApigAwIBAgIGAY9UTB1fMA0GCSqGSIb3DQEBCwUAMIGYMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwET2t0YTEUMBIGA1UECwwLU1NPUHJvdmlkZXIxGTAXBgNVBAMMEGRvamxvZ2luLWdvdnRlc3QxHDAaBgkqhkiG9w0BCQEWDWluZm9Ab2t0YS5jb20wHhcNMjQwNTA3MTgyMjQ1WhcNMzQwNTA3MTgyMzQ1WjCBmDELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDTALBgNVBAoMBE9rdGExFDASBgNVBAsMC1NTT1Byb3ZpZGVyMRkwFwYDVQQDDBBkb2psb2dpbi1nb3Z0ZXN0MRwwGgYJKoZIhvcNAQkBFg1pbmZvQG9rdGEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAskHa5KP8sEXBxTBwMaiued3bGeW5b3soC9IDMp2hRKHM0K9cMusfiE85BhWhDoqyWixdSzewf5L26p7xhrJZNyn4n9XBiQVHPZ2GM4mK6hO68M5RRjw+YVpSUeKvspYReh/vZ1896FYf6SlwGCBmj2kBqPTSu98ByO0b5QTSh2BD3l3ADPF51ncIxeAOhUlWRFZlNRovsxH7OHPm9/lGE3i70YmZrtA1d5yijSShk5vZAhTIS3ExOmCg7LMeUteigVlkKL1aiBYqi2Yb0TVfahIJJ2lMfGvzxt0UehU01uFgAzySRcdxJQK73gZDiJvvaG3cfCCk8ju222nL1lDuDQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAXVcuXncNIGhZ/S0+jHusVeHWyxUQpuuu4oR18WQHSrPE2OFhefnyVMBaXhjDkUUJsDdLMbEm0mMwRX5/nfLHwSUGN0GIfWlYuK0nuRyYgPwX27sQ+IbqG8LqjoWWVCyxaliGnaOPqy6XhcXKtSRdCAJCmXqJuQVTNMlTf7hzzY+IOB4wLxRVWvQped8bQNAl9J4qk1xsp8l1jG+qvyd+RvqL86B3gSnXEcPwtk6ogMdhrupXqh+RBy5XDYjJT2z6llMmW9kBE80EDdLnzj/3LBq7HqfW5V3AANrjd1ZvCLKZ5pr88+HirTBhOO3R1bkQI5RABvbQyNXWhds4jba9J</validationCert>
+</SamlSsoConfig>

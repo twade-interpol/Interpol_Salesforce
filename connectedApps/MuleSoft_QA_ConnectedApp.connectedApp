@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>raghavendra.r.vanavasam@usdoj.gov</contactEmail>
+    <label>MuleSoft QA ConnectedApp</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:8081/callback</callbackUrl>
+        <certificate>MIIEfjCCA2agAwIBAgIOAZC3lexPAAAAAA2ZF1UwDQYJKoZIhvcNAQELBQAwgYExGTAXBgNVBAMMEG11bGVzb2Z0X3FhX2NlcnQxGDAWBgNVBAsMDzAwREJaMDAwMDAwOGpQYzEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0EwHhcNMjQwNzE1MTgwOTM0WhcNMjUwNzE1MTIwMDAwWjCBgTEZMBcGA1UEAwwQbXVsZXNvZnRfcWFfY2VydDEYMBYGA1UECwwPMDBEQlowMDAwMDA4alBjMRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANcoqJ68MX61lFzM9BlhYVp1rMZOVprw6h2pahZMGr7CecZmOF07X2F+o6MCADDVO/4qVJ0Bl00HZu7UTRDOBJaHA/BqH47I3B8IxXXA5G1bR6eR/07xwaJW16Pf/Ma0d2VYIEGfj1/vTdIMtUZO8bmmsmpa+6ny28komrbzwskqlNDnCc/cIRHM0f2mKnwln/YJHrrJicl/mH5b5X/NrksYBUloKw+mleqcs9tKSjBXtK6ht9L9fhnr2quKSE2d/6N/B+WHTkBdypNsU+fqH2ulV+BeR526+9xnSRQ7GEkMTTZh5ieI32nrdMo1kQAM6kISllOp9T/2Cz42VpGhkPMCAwEAAaOB8TCB7jAdBgNVHQ4EFgQUrmAT8Y/zNn6wiP2vZkeAXi70VBcwDwYDVR0TAQH/BAUwAwEB/zCBuwYDVR0jBIGzMIGwgBSuYBPxj/M2frCI/a9mR4BeLvRUF6GBh6SBhDCBgTEZMBcGA1UEAwwQbXVsZXNvZnRfcWFfY2VydDEYMBYGA1UECwwPMDBEQlowMDAwMDA4alBjMRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQYIOAZC3lexPAAAAAA2ZF1UwDQYJKoZIhvcNAQELBQADggEBAF7Zo70/YwgfuhVD6RhtrIeGOXq/GlmuQcxF1gIdSS1BXSXw738AOUlkycuEW1bB77NBEm3q0D1dIm5AhJ91MiI8UFepb0bWfzToYd80S0G3zhgJ6FdVgtXWbdW3AAqOpD9IgbC0TULz51pdy2TeoIBYGyqB1yQDiIQOJ+p9ygGzdUR4cHbZRNipGmceIE3mz0jFQoVv3E8L9JwOxnPx1f4BgtSBwsKKP30QMFNdtLoHZtHBHE42P3XZudpziGIQmB4pKgf5S6soxQdnRjGF9vO4B0OcFcyMcG6rkmx5kXvSs1O+220Qft3uaHLr86AZgUkd4XIok5/UKS9AjVO77uE=</certificate>
+        <consumerKey>3MVG91w9zi214CtVFNOygVFeho_.obiDdu2hDbOpAfKKLewBcI1mhwd_6YmS0DT8ZN4.MtzHmoN1EMV.E1nOl</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>true</isPkceRequired>
+        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>Chatter</scopes>
+        <scopes>CustomApplications</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>OpenID</scopes>
+        <scopes>CustomPermissions</scopes>
+        <scopes>Wave</scopes>
+        <scopes>Eclair</scopes>
+        <scopes>Pardot</scopes>
+        <scopes>Lightning</scopes>
+        <scopes>Content</scopes>
+        <scopes>CDPIngest</scopes>
+        <scopes>CDPProfile</scopes>
+        <scopes>CDPQuery</scopes>
+        <scopes>Chatbot</scopes>
+        <scopes>CDPSegment</scopes>
+        <scopes>CDPIdentityResolution</scopes>
+        <scopes>CDPCalculatedInsight</scopes>
+        <scopes>ForgotPassword</scopes>
+        <scopes>UserRegistration</scopes>
+        <scopes>SFAP</scopes>
+        <scopes>Interaction</scopes>
+        <scopes>CDP</scopes>
+        <scopes>EinsteinGPT</scopes>
+        <scopes>PwdlessLogin</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

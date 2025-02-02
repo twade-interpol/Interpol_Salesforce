@@ -114,14 +114,11 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Interpol_Case_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -129,13 +126,13 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>Interpol_Case</compactLayoutAssignment>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <compactLayouts>
         <fullName>Interpol_Case</fullName>
         <fields>Name</fields>
         <label>INTERPOL Case</label>
     </compactLayouts>
-    <enableFeeds>true</enableFeeds>
+    <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>Aliases__c</fullName>
@@ -163,8 +160,7 @@
     </fields>
     <fields>
         <fullName>CaseId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -267,7 +263,6 @@
     </fields>
     <fields>
         <fullName>PublicComplaintId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -369,17 +364,8 @@
     </fields>
     <listViews>
         <fullName>All_ComplaintCase</fullName>
-        <columns>Name</columns>
-        <columns>Status__c</columns>
-        <columns>Owner</columns>
-        <columns>Offenses__c</columns>
-        <columns>LastModifiedDate</columns>
-        <columns>LastModifiedBy</columns>
-        <columns>Comments__c</columns>
-        <columns>CreatedDate</columns>
-        <columns>CreatedBy</columns>
         <filterScope>Everything</filterScope>
-        <label>All Open INTERPOL Cases</label>
+        <label>All Complaint Cases</label>
     </listViews>
     <listViews>
         <fullName>Counterterrorism_CTD_ComplaintCase</fullName>
@@ -492,12 +478,10 @@
     <searchLayouts>
         <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
-        <excludedStandardButtons>New</excludedStandardButtons>
-        <listViewButtons>New_INTERPOL_Case</listViewButtons>
         <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>Private</sharingModel>
     <webLinks>
         <fullName>New_INTERPOL_Case</fullName>
         <availability>online</availability>
