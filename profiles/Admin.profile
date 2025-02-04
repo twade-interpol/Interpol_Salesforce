@@ -19835,6 +19835,9 @@
         <layout>PublicComplaint-Public Complaint Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Query__c-Query Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>QuickText-Quick Text Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
