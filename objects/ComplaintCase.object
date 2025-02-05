@@ -233,6 +233,18 @@
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>NCIC_Record__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <label>NCIC Record</label>
+        <referenceTo>NCIC__c</referenceTo>
+        <relationshipLabel>INTERPOL Cases</relationshipLabel>
+        <relationshipName>INTERPOL_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Offenses__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <label>Offenses</label>
@@ -357,6 +369,18 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>TECS_Record__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>TECS Record</label>
+        <referenceTo>TECS__c</referenceTo>
+        <relationshipLabel>INTERPOL Cases</relationshipLabel>
+        <relationshipName>INTERPOL_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Type_Of_Notification__c</fullName>
