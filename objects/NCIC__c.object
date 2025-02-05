@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>CancelEdit</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -126,53 +140,80 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
-        <fullName>CaseId</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>NCIC_Record__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <label>NCIC Record</label>
-        <referenceTo>NCIC__c</referenceTo>
-        <relationshipLabel>INTERPOL Cases</relationshipLabel>
-        <relationshipName>INTERPOL_Cases</relationshipName>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>PublicComplaintId</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>TECS_Record__c</fullName>
+        <fullName>INTERPOL_CaseNcic__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
-        <label>TECS Record</label>
-        <referenceTo>TECS__c</referenceTo>
-        <relationshipLabel>INTERPOL Cases</relationshipLabel>
-        <relationshipName>INTERPOL_Cases</relationshipName>
+        <label>INTERPOL Case</label>
+        <referenceTo>ComplaintCase</referenceTo>
+        <relationshipLabel>NCICS</relationshipLabel>
+        <relationshipName>NCICS</relationshipName>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>Message_Type__c</fullName>
+        <label>Message Type</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approval</fullName>
+                    <default>false</default>
+                    <label>Approval</label>
+                </value>
+                <value>
+                    <fullName>Cancellation</fullName>
+                    <default>false</default>
+                    <label>Cancellation</label>
+                </value>
+                <value>
+                    <fullName>Entry</fullName>
+                    <default>false</default>
+                    <label>Entry</label>
+                </value>
+                <value>
+                    <fullName>Modification</fullName>
+                    <default>false</default>
+                    <label>Modification</label>
+                </value>
+                <value>
+                    <fullName>Validation</fullName>
+                    <default>false</default>
+                    <label>Validation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>NCIC</label>
     <listViews>
-        <fullName>All_ComplaintCase</fullName>
+        <fullName>All</fullName>
         <filterScope>Everything</filterScope>
-        <label>All Complaint Cases</label>
+        <label>All</label>
     </listViews>
-    <searchLayouts>
-        <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
-        <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
-        <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
-    </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <nameField>
+        <label>NCIC Number</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>NCICS</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>
