@@ -10,6 +10,9 @@ import { CloseActionScreenEvent } from 'lightning/actions';
 import COMPLAINTCASE_OBJECT from '@salesforce/schema/ComplaintCase'; 
 import { NavigationMixin } from 'lightning/navigation';
 import { IsConsoleNavigation, openTab, closetab, getFocusedTabInfo} from 'lightning/platformWorkspaceApi';
+import lablepc from '@salesforce/label/c.samplePC';
+import labelcase from '@salesforce/label/c.samplecase';
+
 
 export default class Doj_createinterpolCase extends NavigationMixin(LightningElement) {
         @wire(IsConsoleNavigation) isConsoleNavigation;
@@ -151,8 +154,8 @@ onSubmitHandler(event) {
     const fields = event.detail.fields;
     // Here you can execute any logic before submit
     // and set or modify existing fields
-    fields.PublicComplaintId = '0fhSL0000000001YAA';
-    fields.CaseId = '500SL000001YhhtYAC';
+    fields.PublicComplaintId = lablepc; //'0fhSL0000000001YAA';
+    fields.CaseId = labelcase; //'500SL000001YhhtYAC';
     // You need to submit the form after modifications
      this.template.querySelector('lightning-record-form').submit(fields);
 }
