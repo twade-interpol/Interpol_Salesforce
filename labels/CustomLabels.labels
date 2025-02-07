@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata"/>
-
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>samplePC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>samplePC</shortDescription>
+        <value>0fhSL0000000001YAA</value>
+    </labels>
+    <labels>
+        <fullName>samplecase</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>samplecase</shortDescription>
+        <value>500SL000001YhhtYAC</value>
+    </labels>
+</CustomLabels>
