@@ -6,6 +6,7 @@ global class doj_CreateDocument {
         public String recordId;
         public String fileName;
         public String messageType;
+       
     }
 
     @HttpPost
@@ -13,7 +14,12 @@ global class doj_CreateDocument {
         try {
             // Parse the JSON request body
             List<RequestBody> inputs = (List<RequestBody>) JSON.deserialize(RestContext.request.requestBody.toString(), List<RequestBody>.class);
-			system.debug('inputs>>'+inputs);
+			List<ContentVersion> conVersionList =new List<ContentVersion>();
+            List<ContentDocument> conDocList =new List<ContentDocument>();
+            List<ContentDocumentLink> conDocLinkList =new List<ContentDocumentLink>();
+            List<String> inputString = new List<String>();
+            Map<Id,String> contentIdStringMap = new Map<Id,String>();
+            system.debug('inputs>>'+inputs);
             if (inputs == null || inputs.isEmpty()) {
                 RestContext.response.statusCode = 400;
                 return 'Error: Request body cannot be empty.';
